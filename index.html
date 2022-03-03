@@ -18,11 +18,12 @@
 </head>
 <body>
 <!-- Microdata pour formulaire ??? -->
-<!-- Quelle catégorie de micro date utiliser pour l'intro? -->
-
-    <header>
-        <h1 class="socials__title" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span></h1>
-        <section class="socials">
+<!-- Quelle catégorie de micro data utiliser pour l'intro? -->
+<!-- Utiliser des srcset pour les images -->
+<!-- README sur github -->
+    <header class="header">
+        <h1 class="header__title" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span></h1>
+        <section class="header__socials">
             <ul class="socials__ul">
                 <li class="socials__item">
                     <a class="socials__link" href="">
@@ -41,7 +42,7 @@
                 </li>
             </ul>
         </section>
-        <nav class="nav">
+        <nav class="header__nav">
             <h2 class="nav__title">Menu de Navigation</h2>
             <ul class="nav__ul">
                 <li class="nav__item">
@@ -60,14 +61,17 @@
         </nav>
     </header>
 
-    <!-- Bannière avec illustration et éléments interactifs -->
-    <section>
-        <svg></svg>
-        <canvas></canvas>
+    <section class="banner">
+        <!-- svg inline -->
+        <svg class="banner__bird">
+
+        </svg>
+        <!-- Canvas transparent via JS, fond couleur uni géré sur CSS -->
+        <canvas id="draw" width="" height=""></canvas>
     </section>
 
-    <main>
-        <section class="intro">
+    <main class="main">
+        <section class="main__intro">
             <h2 class="intro__title">Hey ! Je suis Nathan, un designer web & illustrateur belge.</h2>
             <p class="intro__text">
                 Je suis un créatif à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore !
@@ -80,8 +84,7 @@
                 Je maîtrise donc les langages front-end tel que l’<abbr title="HyperText Markup Language">HTML</abbr>, le <abbr title="Cascading Style Sheets">CSS</abbr> ou encore le <abbr title="JavaScript">JS</abbr>. Il en va de même pour le <abbr title="Hypertext Preprocessor">PHP</abbr>, le <abbr title="Structured Query Language">SQL</abbr> et les autres langages dit back-end. Enfin, grâce à mon expérience d’illustrateur et de designer freelance, je suis en mesure d’utiliser les logiciels de la suite Adobe ainsi que Figma.
             </p>
         </section>
-
-        <section class="portfolio-illu" itemscope itemtype="https://schema.org/CreativeWork">
+        <section class="main__portfolio-illu" itemscope itemtype="https://schema.org/CreativeWork">
             <h2 class="portfolio-illu__title" itemprop="about">Portfolio d'illustration</h2>
             <ul class="portfolio-illu__ul">
                 <li class="portfolio-illu__item">
@@ -123,25 +126,23 @@
                 <a class="portfolio-illu__promo-link" href="index.html">Vers mon portfolio</a>
             </section>
         </section>
-
-        <section class="portfolio-wd">
+        <section class="main__portfolio-wd">
             <!-- Portfolio web design (des templates stylisés de sites que j'aimes en SVG) -->
         </section>
-
-        <section class="socials-again">
-            <ul class="socials-again__ul">
-                <li class="socials-again__item">
-                    <a class="socials-again__link" href="">
+        <section class="main__socials">
+            <ul class="main__socials__ul">
+                <li class="main__socials__item">
+                    <a class="main__socials__link" href="">
                         <img src="img/twitter_icon.svg" alt="twitter_icon">
                     </a>
                 </li>
-                <li class="socials-again__item">
-                    <a class="socials-again__link" href="">
+                <li class="main__socials__item">
+                    <a class="main__socials__link" href="">
                         <img src="img/instagram_icon.svg" alt="instagram_icon">
                     </a>
                 </li>
-                <li class="socials-again__item">
-                    <a class="socials-again__link" href="">
+                <li class="main__socials__item">
+                    <a class="main__socials__link" href="">
                         <img src="img/devianart_icon.svg" alt="deviant_art_icon">
                     </a>
                 </li>
@@ -149,16 +150,15 @@
         </section>
     </main>
 
-    <footer>
-        <section class="contact">
-            <form class="contact-form">
-                <label class="contact-form__label" for="f_email">Adresse Email :</label>
-                <input class="contact-form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email">
-                <button class="contact-form__button" type="submit">Envoyer</button>
+    <footer class="footer">
+        <section class="footer__contact">
+            <form class="footer__form">
+                <label class="form__label" for="f_email">Adresse Email :</label>
+                <input class="form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email">
+                <button class="form__button" type="submit">Envoyer</button>
             </form>
         </section>
-
-        <ul class="slider" itemscope itemtype="https://schema.org/CreativeWork">
+        <ul class="footer__slider" itemscope itemtype="https://schema.org/CreativeWork">
             <li class="slider__item">
                 <img src="img/ike_fanart.jpg" alt="ike_fanart" itemprop="image">
             </li>
