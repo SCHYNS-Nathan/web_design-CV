@@ -19,10 +19,7 @@
 <body>
 
 <!-- Utiliser des srcset pour les images "grande" -->
-
 <!-- README sur github -->
-<!-- link title -->
-
 <!-- nav au clavier et voiceOver, JS désactivé, test sur différents navigateur, ... -->
 
     <header class="header">
@@ -84,7 +81,7 @@
             <p class="intro__text">
                 Je suis un créatif à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore !
                 Étant à la croisé de l’univer créatif de l’illustration et technique du design web, je suis en mesure de créer votre site du premier croquis à la dernière ligne de code.
-                Si vous avez la moindre question à me poser par rapport à vos projets, je suis joignable via <a id="email" href="mailto: nathan.schyns@student.hepl.be">mon adresse email</a>. Mais vous pouvez aussi me contacter via mes réseaux sociaux si vous préférez !
+                Si vous avez la moindre question à me poser par rapport à vos projets, je suis joignable via <a id="email" href="mailto: nathan.schyns@student.hepl.be" title="Ouvre votre service email de préférence">mon adresse email</a>. Mais vous pouvez aussi me contacter via mes réseaux sociaux si vous préférez !
             </p>
             <h2 class="intro__title">Mon parcours et mes compétences.</h2>
             <p class="intro__text">
@@ -130,7 +127,7 @@
                 <p class="portfolio-illu__promo-text" itemprop="comment">
                     L’illustration fait tout autant parti de mon approche du métier que le design web. Si vous voulez voir l’entièreté de mes travaux, je vous invite à vous rendre sur mon portfolio ou l’un de mes réseaux sociaux !
                 </p>
-                <a class="portfolio-illu__promo-link" href="index.html">Vers mon portfolio</a>
+                <a class="portfolio-illu__promo-link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">Vers mon portfolio</a>
             </section>
         </section>
         <section class="main__portfolio-wd">
@@ -166,59 +163,70 @@
     <footer class="footer">
         <section class="footer__contact">
             <form class="footer__form">
-                <label class="form__label" for="f_email"><a id="contact"></a>Adresse Email :</label>
-                <input class="form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email">
+                <h2 class="footer__title"><a id="contact"></a>Formulaire de contact</h2>
+                <label class="form__label" for="f_name">Nom de famille :</label>
+                <input class="form__input" id="f_name" name="f_name" type="text" placeholder="Nom de famille">
+
+                <label class="form__label" for="f_firstname">Prénom :</label>
+                <input class="form__input" id="f_firstname" name="f_firstname" type="text" placeholder="Prénom">
+
+                <label class="form__label" for="f_email">Adresse Email :</label>
+                <input class="form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email" size="28">
+
+                <label class="form__label" for="f_message">Votre message :</label>
+                <input class="form__input" id="f_message" name="f_message" type="text" placeholder="Écrivez votre message ici">
+
                 <button class="form__button" type="submit">Envoyer</button>
             </form>
         </section>
         <ul class="footer__slider" itemscope itemtype="https://schema.org/CreativeWork">
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/ike_fanart.jpg" alt="ike_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/samus_fanart.jpg" alt="samus_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/fox_fanart.jpg" alt="fox_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/zelda_fanart.jpg" alt="zelda_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/yoshi_fanart.jpg" alt="yoshi_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/snake_fanart.jpg" alt="snake_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/ganondorf_fanart.jpg" alt="ganondorf_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/ness_fanart.jpg" alt="ness_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/pikachu_fanart.jpg" alt="pikachu_fanart" itemprop="image">
                 </a>
             </li>
             <li class="slider__item">
-                <a class="slider__link" href="index.html">
+                <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
                     <img class="slider__img" src="img/mario_fanart.jpg" alt="mario_fanart" itemprop="image">
                 </a>
             </li>
