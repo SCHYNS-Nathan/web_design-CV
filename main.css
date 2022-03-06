@@ -19,7 +19,7 @@ ul {
     float: left;
 }
 
-/*.header__socials img {
+.header__socials svg {
     background-color: #282F39;
     padding: 10px;
     border-radius: 50px;
