@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,38 +46,156 @@ table {
     border-spacing: 0;
 }
 
+
+
 /* --------------- -600px VERSION --------------- */
+@media (max-width: 600px) {
+    .socials__item {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+    }
+    header {
+        height: 340px;
+    }
+    a .socials__item {
+        margin-top: 16px;
+    }
+    a:first-child .socials__item {
+        margin-left: 25px;
+    }
+    a:nth-child(n+2) .socials__item {
+        margin-left: 12px;
+    }
+    .main__intro {
+        padding: 25px;
+        background-color: #fff;
+    }
+}
+
+
 
 /* --------------- 600px -> 750px VERSION --------------- */
+@media (min-width: 601px) and (max-width: 750px) {
+    .socials__item {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+    }
+    a:first-child .socials__item {
+        margin-left: 25px;
+    }
+    header {
+        height: 340px;
+    }
+    a .socials__item {
+        margin-top: 16px;
+    }
+    a:nth-child(n+2) .socials__item {
+        margin-left: 12px;
+    }
+    .main__intro {
+        padding: 25px;
+        margin: 0 25px;
+        background-color: #fff;
+        border-radius: 7px;
+    }
+
+}
+
+
 
 /* --------------- 750px -> 950px VERSION --------------- */
+@media (min-width: 751px) and (max-width: 950px) {
+    .socials__item {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+    }
+    a:first-child .socials__item {
+        margin-left: 50px;
+    }
+    header {
+        height: 340px;
+    }
+    a .socials__item {
+        margin-top: 24px;
+    }
+    a:first-child .socials__item {
+        margin-left: 35px;
+    }
+    a:nth-child(n+2) .socials__item {
+        margin-left: 12px;
+    }
+    .main__intro {
+        padding: 35px;
+    }
+}
+
+
 
 /* --------------- +950px VERSION --------------- */
+@media (min-width: 951px) {
+    .socials__item {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+    }
+    a:first-child .socials__item {
+        margin-left: 50px;
+    }
+    header {
+        height: 340px;
+    }
+    a .socials__item {
+        margin-top: 24px;
+    }
+    a:first-child .socials__item {
+        margin-left: 35px;
+    }
+    a:nth-child(n+2) .socials__item {
+        margin-left: 12px;
+    }
+    .main__intro {
+        padding: 35px;
+    }
+}
+
+
 
 /* --------------- COMMON ELEMENTS --------------- */
-
 html {
-    font-family: Quando, Merryweather, serif;
+    font-family: Quando, Merriweather, serif;
+    letter-spacing: 1px;
     color: #282F39;
+    background-color: #ECECEC;
+}
+h2 {
+    font-family: Quando, Merriweather, serif;
+    font-size: 22px;
+    line-height: 120%;
+}
+p {
+    font-family: Merriweather, serif;
+    font-weight: lighter;
+    line-height: 150%;
 }
 h1, .nav__title, .portfolio-illu__title, .footer__title {
     font-size: 0;
+}
+canvas, .banner__bird {
+    display: none;
 }
 
 header {
     background-color: #282F39;
 }
+
 .socials__item {
     display: flex;
     justify-content: center;
     float: left;
     background-color: #496E77;
-    width: 64px;
-    height: 64px;
-    border-radius: 32px;
-}
-a:first-child .socials__item {
-    margin-left: 25px;
 }
 a:first-child .socials__item:hover {
     background-color: #FFC500;
@@ -89,28 +206,23 @@ a:nth-child(2) .socials__item:hover {
 a:last-child .socials__item:hover {
     background-color: #13AEA2;
 }
+.socials__item:active {
+    background-color: #fff;
+}
 .socials__item svg {
     margin: auto;
 }
-
 .header__nav {
     clear: both;
 }
-.nav__title {
-    font-size: 0;
-}
 
-.main__intro {
-    padding: 25px;
-}
-h2 {
-    font-size: 20px;
-}
+
 .intro__text {
     font-size: 16px;
+    padding: 10px 0 20px;
 }
-.main__portfolio-illu {
-    background-color: #ECECEC;
+.intro__text:last-child {
+    padding-bottom: 0;
 }
 .portfolio-illu__ul {
     display: grid;
@@ -120,8 +232,29 @@ h2 {
 .portfolio-illu__image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
-
+.portfolio-illu__promo {
+    padding: 30px 25px 30px;
+}
+.portfolio-illu__promo-text {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.portfolio-illu__promo-button {
+    background-color: #282F39;
+    padding: 10px 20px 10px;
+    border-radius: 7px;
+}
+.portfolio-illu__promo a {
+    text-decoration: none;
+    color: #fff;
+}
+.portfolio-illu__promo svg {
+    background-color: #DD5172;
+    padding: 4px;
+    border-radius: 10px;
+}
 .main__socials__item {
     display: flex;
     justify-content: center;
