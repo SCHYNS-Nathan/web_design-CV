@@ -17,10 +17,22 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-
+<!-- ----------------- HTML ----------------- -->
+<!-- Illu SVG -->
+<!-- Portfolio WD SVG -->
 <!-- Utiliser des srcset pour les images "grande" -->
 <!-- README sur github -->
 <!-- nav au clavier et voiceOver, JS désactivé, test sur différents navigateur, ... -->
+
+<!-- ----------------- CSS ----------------- -->
+<!-- Menu nav -->
+<!-- Link color + hover -->
+<!-- abbr color -->
+<!-- Boutton portfolio -->
+<!-- Terminer form -->
+
+<!-- CSS animation -->
+<!-- unité de mesure (px -> em / % -->
 
     <header class="header">
         <h1 class="header__title" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span></h1>
@@ -131,10 +143,12 @@
                 <p class="portfolio-illu__promo-text" itemprop="comment">
                     L’illustration fait tout autant parti de mon approche du métier que le design web. Si vous voulez voir l’entièreté de mes travaux, je vous invite à vous rendre sur mon portfolio ou l’un de mes réseaux sociaux !
                 </p>
-                <section class="portfolio-illu__promo-button">
-                    <a class="portfolio-illu__promo-link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">Vers mon portfolio</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="#fff" d="M24 12l-12-9v5h-12v8h12v5l12-9z"/></svg>
-                </section>
+                <a class="portfolio-illu__promo-link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">
+                    <section class="portfolio-illu__promo-button">
+                        <p class="portfolio-illu__promo-text">Vers mon portfolio</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="#fff" d="M24 12l-12-9v5h-12v8h12v5l12-9z"/></svg>
+                    </section>
+                </a>
             </section>
         </section>
         <section class="main__portfolio-wd">
@@ -169,18 +183,21 @@
 
     <footer class="footer">
         <section class="footer__contact">
+            <p class="footer__text">
+                Vous voulez me contacter pour présenter votre projet, commissionner une illustration ou juste poser une question&nbsp;? C'est simple, remplissez le formulaire de contact&nbsp;!
+            </p>
+            <h2 class="footer__title"><a id="contact"></a>Formulaire de contact</h2>
             <form class="footer__form">
-                <h2 class="footer__title"><a id="contact"></a>Formulaire de contact</h2>
-                <label class="form__label" for="f_name">Nom de famille :</label>
+                <label class="form__label" for="f_name">Nom de famille</label>
                 <input class="form__input" id="f_name" name="f_name" type="text" placeholder="Nom de famille">
 
-                <label class="form__label" for="f_firstname">Prénom :</label>
+                <label class="form__label" for="f_firstname">Prénom</label>
                 <input class="form__input" id="f_firstname" name="f_firstname" type="text" placeholder="Prénom">
 
-                <label class="form__label" for="f_email">Adresse Email :</label>
+                <label class="form__label" for="f_email">Adresse email</label>
                 <input class="form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email" size="28">
 
-                <label class="form__label" for="f_message">Votre message :</label>
+                <label class="form__label" for="f_message">Votre message</label>
                 <input class="form__input" id="f_message" name="f_message" type="text" placeholder="Écrivez votre message ici">
 
                 <button class="form__button" type="submit">Envoyer</button>
