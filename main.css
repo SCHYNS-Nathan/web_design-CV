@@ -21,7 +21,6 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,14 +47,103 @@ table {
     border-spacing: 0;
 }
 
-/* --------------- MOBILE VERSION --------------- */
+/* --------------- -600px VERSION --------------- */
 
-/* --------------- DESKTOP VERSION --------------- */
+/* --------------- 600px -> 750px VERSION --------------- */
+
+/* --------------- 750px -> 950px VERSION --------------- */
+
+/* --------------- +950px VERSION --------------- */
 
 /* --------------- COMMON ELEMENTS --------------- */
 
 html {
-    font-family: Merryweather, serif;
+    font-family: Quando, Merryweather, serif;
     color: #282F39;
+}
+h1, .nav__title, .portfolio-illu__title, .footer__title {
+    font-size: 0;
+}
+
+header {
+    background-color: #282F39;
+}
+.socials__item {
+    display: flex;
+    justify-content: center;
+    float: left;
+    background-color: #496E77;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+a:first-child .socials__item {
+    margin-left: 25px;
+}
+a:first-child .socials__item:hover {
+    background-color: #FFC500;
+}
+a:nth-child(2) .socials__item:hover {
+    background-color: #DD5172;
+}
+a:last-child .socials__item:hover {
+    background-color: #13AEA2;
+}
+.socials__item svg {
+    margin: auto;
+}
+
+.header__nav {
+    clear: both;
+}
+.nav__title {
+    font-size: 0;
+}
+
+.main__intro {
+    padding: 25px;
+}
+h2 {
+    font-size: 20px;
+}
+.intro__text {
+    font-size: 16px;
+}
+.main__portfolio-illu {
+    background-color: #ECECEC;
+}
+.portfolio-illu__ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 110px 110px;
+}
+.portfolio-illu__image {
+    width: 100%;
+    height: 100%;
+}
+
+.main__socials__item {
+    display: flex;
+    justify-content: center;
+    background-color: #DD5172;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+.main__socials__item svg {
+    margin: auto;
+}
+
+.footer {
+    clear: both;
+}
+
+
+.footer__slider {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.slider__img {
+    width: 100%;
 }
 
