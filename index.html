@@ -22,9 +22,12 @@
 <body>
 <!-- ----------------- HTML ----------------- -->
 <!-- Portfolio WD SVG: Régler problème espacement, Ajouter article en pop up lorsque l'on clique sur une image -->
-<!-- Utiliser des srcset pour les images "grande" -->
-<!-- README sur github (URL site de réf, vidéo interaction, analyse du CV comme le site de la HEPL, ... ) -->
+<!-- Illustration principale au propre -->
 <!-- nav au clavier et voiceOver, JS désactivé, test sur différents navigateur, ... -->
+
+
+<!-- README sur github (URL site de réf, vidéo interaction, analyse du CV comme le site de la HEPL, ... ) -->
+<!-- Utiliser des srcset pour les images "grande" -->
 
 <!-- ----------------- CSS ----------------- -->
 <!-- Menu nav -->
@@ -33,6 +36,9 @@
 <!-- CSS animation -->
 <!-- unité de mesure (px -> em / % -->
 
+<!-- ----------------- JS ----------------- -->
+<!-- Canvas -->
+<!-- Apparition fondue -->
     <header class="header">
         <h1 class="header__title hidden" itemscope itemtype="https://schema.org/Person">
             <span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span>
@@ -65,20 +71,30 @@
         </section>
         <nav class="header__nav">
             <h2 class="nav__title hidden">Menu de Navigation</h2>
-            <ul class="nav__ul">
-                <li class="nav__item">
-                    <a class="nav__link" href="index.html" title="Recharger la page d'accueil">Accueil</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="index.html" title="Se rendre sur la page dessin">Dessin</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">Portfolio</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#contact" title="Naviguer jusqu'au formulaire de contact de cette page">Contact</a>
-                </li>
-            </ul>
+            <div class="nav__burger">
+                <label class="nav__label">
+                    <input class="nav__button hidden" type="checkbox">
+                    <svg class="nav__svg" width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H33" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M3 15H33" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M3 27H33" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                    <ul class="nav__ul">
+                        <li class="nav__item">
+                            <a class="nav__link" href="index.html" title="Recharger la page d'accueil">Accueil</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="index.html" title="Se rendre sur la page dessin">Dessin</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">Portfolio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#contact" title="Naviguer jusqu'au formulaire de contact de cette page">Contact</a>
+                        </li>
+                    </ul>
+                </label>
+            </div>
         </nav>
         <svg class="banner">
 
@@ -504,11 +520,12 @@
         </section>
     </main>
     <footer class="footer">
+        <a id="contact"></a>
         <section class="footer__contact">
             <p class="footer__text">
                 Vous voulez me contacter pour présenter votre projet, commissionner une illustration ou juste poser une question&nbsp;? C'est simple, remplissez le formulaire de contact&nbsp;!
             </p>
-            <h2 class="footer__title"><a id="contact"></a>Formulaire de contact</h2>
+            <h2 class="footer__title">Formulaire de contact</h2>
             <form class="footer__form">
                 <label class="form__label" for="f_name">Nom de famille</label>
                 <input class="form__input" id="f_name" name="f_name" type="text" placeholder="Nom de famille">
