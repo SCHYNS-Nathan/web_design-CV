@@ -1,8 +1,4 @@
-/* --------------- RESET CSS --------------- */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* --------------- RESET CSS (MEYER) --------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,7 +18,6 @@ time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -34,20 +29,23 @@ ol, ul {
     list-style: none;
 }
 
+
 /* --------------- CSS STARTS HERE !!! --------------- */
 html {
     font-family: Quando, Merriweather, serif;
     letter-spacing: 1px;
-    color: #282F39;
     background-color: #ECECEC;
+    color: #282F39;
 }
-h1, .socials__title, .nav__title, .main__title, .portfolioWd__title, .portfolioIllu__title, .footer__title, .slider__title {
+.hidden {
     position: absolute;
     top: -10000px;
     left: -10000px;
 }
+.footer__title {
+    font-size: 0;
+}
 h2, h3 {
-    font-size: 22px;
     line-height: 120%;
 }
 p {
@@ -60,27 +58,16 @@ br {
 }
 ::selection {
     background-color: #13AEA2;
-    color: white;
-}
-/* TODO focus */
-*:focus {
-
+    color: #ffffff;
 }
 
-
-
-
-/* TODO */
-canvas, .banner__bird {
-    display: none;
-}
 
 header {
     background-color: #282F39;
 }
 
 .socials__item {
-    float: left;
+    display: inline-block;
     background-color: #496E77;
 }
 .socials__item:first-of-type:hover {
@@ -91,9 +78,6 @@ header {
 }
 .socials__item:last-child:hover {
     background-color: #13AEA2;
-}
-.socials__item:active {
-    background-color: #fff;
 }
 .socials__item svg {
     align-self: center;
@@ -110,13 +94,15 @@ header {
     height: 100%;
 }
 
-.header__nav {
-    clear: both;
+/* TODO */
+canvas, .banner__bird {
+    display: none;
 }
 
-
+.main__intro {
+    background-color: #ffffff;
+}
 .intro__text {
-    font-size: 16px;
     margin: 10px 0 20px;
 }
 .intro__text a {
@@ -131,95 +117,95 @@ header {
 .intro__text abbr:hover {
     text-decoration: #DD5172 wavy underline;
 }
-
 section:last-child .intro__text {
     margin-bottom: 0;
 }
 
-
-.portfolioIllu__promo {
-    padding: 30px 25px 30px;
+.portfolioIllu__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 .portfolioIllu__promoText {
     font-size: 16px;
     margin: 30px 25px 20px;
     text-align: center;
 }
-
 .portfolioIllu__promoButton {
-    background-color: #282F39;
-    margin: auto;
-    padding: 12px 20px;
-    border-radius: 7px;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-content: center;
+    margin: auto;
+    padding: 12px 20px;
+    background-color: #282F39;
+    border-radius: 7px;
 }
 .portfolioIllu__promoLink {
     text-decoration: none;
 }
 .portfolioIllu__promoLinkText {
     display: inline-block;
-    background-color: #282F39;
     text-transform: uppercase;
     color: #fff;
 }
 .portfolioIllu__svg {
-    display: inline-block;
-    background-color: #DD5172;
-    border-radius: 10px;
     margin-left: 8px;
-    width: 20px;
     height: 20px;
+    border-radius: 10px;
+    background-color: #DD5172;
 }
 .portfolioIllu__svg svg {
     padding: 4px;
 }
 
-.main__socials__ul {
+.portfolioWd__title {
+    order: 8;
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
 }
-.main__socials__item {
-    width: 48px;
-    height: 48px;
-    border-radius: 24px;
+.portfolioWd__clientName {
+    font-weight: lighter;
+    text-align: center;
+}
+.portfolioWd__group svg {
+    width: 100%;
 }
 
 .main__socials {
-    margin: 50px auto 20px;
+    margin: 30px auto 20px;
 }
 .main__socials__ul {
     display: flex;
     justify-content: center;
 }
-.main__socials__item {
+.main__socials__item a {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 8px;
-    background-color: #DD5172;
     width: 64px;
     height: 64px;
+    background-color: #DD5172;
     border-radius: 32px;
 }
 
 
-.footer {
-    clear: both;
-}
 .footer__contact {
-    background-color: #416E7C;
     padding: 50px 25px;
-    color: #ffffff;
     text-align: center;
+    background-color: #416E7C;
+    color: #ffffff;
 }
 .footer__form {
-    margin-top: 30px;
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
+    grid-gap: 5px;
+    margin-top: 30px;
 }
+/* TODO */
 .form__label {
     display: flex;
     align-items: center;
@@ -227,36 +213,34 @@ section:last-child .intro__text {
     padding-right: 10px;
 }
 .form__input {
+    min-height: 32px;
     border-radius: 5px;
     border-style: none;
-    min-height: 32px;
 }
 .form__button {
     margin-top: 10px;
     grid-column: 1/3;
 }
 
-
-.slider__ul {
-    display: grid;
-}
 .slider__img {
-    width: 100%;
+    max-width: 100%;
 }
 
 @media (max-width: 480px) {
     h2, h3 {
         font-size: 18px;
     }
+
+
     header {
         height: 340px;
     }
 
     .socials__item {
+        margin-top: 16px;
         width: 48px;
         height: 48px;
         border-radius: 24px;
-        margin-top: 16px;
     }
     .socials__item:first-child {
         margin-left: 25px;
@@ -265,9 +249,12 @@ section:last-child .intro__text {
         margin-left: 8px;
     }
 
+
     .main__intro {
         padding: 25px;
-        background-color: #fff;
+    }
+    .intro__text {
+        font-size: 14px;
     }
 
     .portfolioIllu__ul {
@@ -275,63 +262,48 @@ section:last-child .intro__text {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 22.5vw 22.5vw;
     }
-    .portfolioIllu__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+
     .portfolioIllu__promoText {
         font-size: 14px;
-        margin: 30px 25px;
-        text-align: center;
     }
     .portfolioIllu__promoButton {
         width: 65vw;
     }
 
     .main__portfolioWd {
-        margin: 30px 10px 0;
         display: grid;
-        grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
+        grid-gap: 15px;
+        margin: 30px 10px 0;
     }
-    .portfolioWd__title {
-        order: 8;
-        position: absolute;
-        top: -10000px;
-        left: -10000px;
-    }
-
     .portfolioWd__clientName {
         font-size: 16px;
-        font-weight: lighter;
-        text-align: center;
     }
-    .portfolioWd__group svg {
-        width: 100%;
-    }
+
 
     .slider__ul {
         display: grid;
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 2px;
         margin-top: 2px;
-        grid-template-columns: repeat(4, 1fr);
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
     h2, h3 {
         font-size: 20px;
     }
+
+
     header {
         height: 440px;
     }
 
     .socials__item {
+        margin-top: 16px;
         width: 48px;
         height: 48px;
         border-radius: 24px;
-        margin-top: 16px;
     }
     .socials__item:first-child {
         margin-left: 25px;
@@ -340,75 +312,67 @@ section:last-child .intro__text {
         margin-left: 12px;
     }
 
+
     .main__intro {
-        padding: 25px;
         margin: -100px 25px 0;
-        background-color: #fff;
+        padding: 25px;
         border-radius: 7px;
+    }
+    .intro__text {
+        font-size: 14px;
     }
 
     .portfolioIllu__ul {
-        display: grid;
         grid-gap: 5px;
-        margin: 10px 25px 0;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 20vw 20vw;
+        display: grid;
+        margin: 10px 25px 0;
     }
     .portfolioIllu__image {
         border-radius: 7px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    }
+    .portfolioIllu__promoText {
+        font-size: 14px;
     }
     .portfolioIllu__promoButton {
         width: 50vw;
     }
 
     .main__portfolioWd {
-        margin: 30px 10px 0;
         display: grid;
-        grid-gap: 25px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
-    }
-    .portfolioWd__title {
-        order: 8;
-        position: absolute;
-        top: -10000px;
-        left: -10000px;
+        grid-gap: 25px;
+        margin: 30px 10px 0;
     }
     .portfolioWd__clientName {
         font-size: 16px;
-        font-weight: lighter;
-        text-align: center;
     }
-    .portfolioWd__group svg {
-        width: 100%;
-    }
+
 
     .slider__ul {
         display: grid;
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 2px;
         margin-top: 2px;
-        grid-template-columns: repeat(6, 1fr);
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
     h2, h3 {
         font-size: 20px;
     }
+
+
     header {
         height: 648px;
     }
 
     .socials__item {
+        margin-top: 24px;
         width: 52px;
         height: 52px;
         border-radius: 26px;
-        margin-top: 24px;
-    }
-    a:first-child .socials__item {
-        margin-left: 50px;
     }
     .socials__item:first-child {
         margin-left: 50px;
@@ -421,60 +385,43 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5%;
-        padding: 25px;
         margin: -308px 35px 0;
-        background-color: #fff;
+        padding: 25px;
         border-radius: 7px;
     }
-    .main__title {
-        position: absolute;
-        top: -10000px;
-        left: -10000px;
+    .intro__text {
+        font-size: 16px;
     }
 
     .portfolioIllu__ul {
         display: grid;
-        grid-gap: 5px;
-        margin: 10px 35px 0;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 20vw 20vw;
+        grid-gap: 5px;
+        margin: 10px 35px 0;
     }
     .portfolioIllu__image {
         border-radius: 7px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
-    .portfolioIllu__promo-text {
+    .portfolioIllu__promoText {
+        margin: 30px auto 20px;
         width: 80%;
-        margin: auto;
     }
-
     .portfolioIllu__promoButton {
-        width: 35vw;
+        width: 40vw;
     }
 
     .main__portfolioWd {
-        margin: 30px 35px 0;
         display: grid;
-        grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(3, auto);
-    }
-    .portfolioWd__title {
-        order: 8;
-        position: absolute;
-        top: -10000px;
-        left: -10000px;
+        grid-gap: 15px;
+        margin: 30px 35px 0;
     }
     .portfolioWd__clientName {
         font-size: 16px;
-        font-weight: lighter;
-        text-align: center;
     }
-    .portfolioWd__group svg {
-        width: 100%;
-    }
+
 
     .footer__contact {
         margin: 0 35px;
@@ -482,15 +429,17 @@ section:last-child .intro__text {
 
     .slider__ul {
         display: grid;
+        grid-template-columns: repeat(7, 1fr);
         grid-gap: 2px;
         margin: 2px 35px 0;
-        grid-template-columns: repeat(7, 1fr);
     }
 }
 @media (min-width: 1025px) {
     h2, h3 {
         font-size: 22px;
     }
+
+
     header {
         height: 848px;
     }
@@ -512,58 +461,49 @@ section:last-child .intro__text {
         height: 40px;
     }
 
+
     .main__intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 25%;
         padding: 100px 45px 25px;
         margin: -408px 35px 0;
-        background-color: #fff;
         border-radius: 7px;
+    }
+    .intro__text {
+        font-size: 16px;
     }
     .main__paragraph:last-child {
         text-align: right;
     }
 
-
     .portfolioIllu__ul {
         display: grid;
-        grid-gap: 5px;
-        margin: 10px 35px 0;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 20vw 20vw;
+        grid-gap: 5px;
+        margin: 10px 35px 0;
     }
     .portfolioIllu__image {
         border-radius: 7px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
-
     .portfolioIllu__promoButton {
         width: 35vw;
+    }
+    .portfolioIllu__promoText {
+        width: 60%;
+        margin: 30px auto 20px;
     }
 
     .main__portfolioWd {
         margin: 30px 35px 0;
         display: grid;
-        grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(2, auto);
-    }
-    .portfolioWd__title {
-        order: 8;
-        position: absolute;
-        top: -10000px;
-        left: -10000px;
+        grid-gap: 15px;
     }
     .portfolioWd__clientName {
         font-size: 16px;
-        font-weight: lighter;
-        text-align: center;
-    }
-    .portfolioWd__group svg {
-        width: 100%;
     }
 
 
@@ -572,8 +512,30 @@ section:last-child .intro__text {
     }
     .slider__ul {
         display: grid;
+        grid-template-columns: repeat(10, 1fr);
         grid-gap: 2px;
         margin: 2px 35px 0;
-        grid-template-columns: repeat(10, 1fr);
     }
 }
+
+/* ---------------  FOCUS STYLE  --------------- */
+a:focus {
+    color: #DD5172;
+}
+
+.socials__item:first-of-type a:focus {
+    background-color: #FFC500;
+    border-radius: 32px;
+}
+.socials__item:nth-child(n+2) a:focus {
+    background-color: #DD5172;
+    border-radius: 32px;
+}
+.socials__item:nth-child(n+3) a:focus {
+    background-color: #13AEA2;
+    border-radius: 32px;
+}
+.main__socials__item a:focus {
+    background-color: #13AEA2;
+}
+

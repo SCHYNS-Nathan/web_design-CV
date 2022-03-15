@@ -21,7 +21,7 @@
 </head>
 <body>
 <!-- ----------------- HTML ----------------- -->
-<!-- Portfolio WD SVG -->
+<!-- Portfolio WD SVG: Régler problème espacement, Ajouter article en pop up lorsque l'on clique sur une image -->
 <!-- Utiliser des srcset pour les images "grande" -->
 <!-- README sur github (URL site de réf, vidéo interaction, analyse du CV comme le site de la HEPL, ... ) -->
 <!-- nav au clavier et voiceOver, JS désactivé, test sur différents navigateur, ... -->
@@ -34,13 +34,11 @@
 <!-- unité de mesure (px -> em / % -->
 
     <header class="header">
-        <h1 class="header__title" itemscope itemtype="https://schema.org/Person">
+        <h1 class="header__title hidden" itemscope itemtype="https://schema.org/Person">
             <span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span>
         </h1>
         <section class="header__socials">
-            <h2 class="socials__title">
-                Mes réseaux sociaux
-            </h2>
+            <h2 class="socials__title hidden">Mes réseaux sociaux</h2>
             <ul class="socials__ul">
                 <li class="socials__item">
                     <a class="socials__link" href="https://twitter.com/nat60038" title="Se rendre sur ma page Twitter">
@@ -66,9 +64,7 @@
             </ul>
         </section>
         <nav class="header__nav">
-            <h2 class="nav__title">
-                Menu de Navigation
-            </h2>
+            <h2 class="nav__title hidden">Menu de Navigation</h2>
             <ul class="nav__ul">
                 <li class="nav__item">
                     <a class="nav__link" href="index.html" title="Recharger la page d'accueil">Accueil</a>
@@ -93,13 +89,9 @@
     </header>
     <main class="main">
         <section class="main__intro" itemscope itemtype="https://schema.org/Person">
-            <h2 class="main__title">
-                À propos de moi
-            </h2>
+            <h2 class="main__title hidden">À propos de moi</h2>
             <section class="main__paragraph">
-                <h3 class="intro__title">
-                    Hey ! Je suis <span itemprop="givenName">Nathan</span>, un <span itemprop="jobTitle">designer web</span> & <span itemprop="jobTitle">illustrateur</span> <span itemprop="nationality">belge</span>.
-                </h3>
+                <h3 class="intro__title">Hey ! Je suis <span itemprop="givenName">Nathan</span>, un <span itemprop="jobTitle">designer web</span> & <span itemprop="jobTitle">illustrateur</span> <span itemprop="nationality">belge</span>.</h3>
                 <p class="intro__text">
                     Je suis un jeune créatif à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore !<br>
                     Étant à la croisé de l’univers créatif de l’illustration et technique du design web, je suis en mesure de créer votre site du premier croquis à la dernière ligne de code.<br>
@@ -107,9 +99,7 @@
                 </p>
             </section>
             <section class="main__paragraph">
-                <h3 class="intro__title">
-                    Mon parcours et mes compétences.
-                </h3>
+                <h3 class="intro__title">Mon parcours et mes compétences.</h3>
                 <p class="intro__text">
                     Durant ma carrière, j’ai eu la chance de travailler sur de nombreux projets. Que ce soit des pages web responsives, des designs d’applications mobiles ou encore un livre muet pour enfants, j’ai l’habitude de m’exprimer au travers de supports très variés !<br>
                     Je maîtrise donc les langages front-end tel que l’<abbr title="HyperText Markup Language" itemprop="knowsAbout">HTML</abbr>, le <abbr title="Cascading Style Sheets" itemprop="knowsAbout">CSS</abbr> ou encore le <abbr title="JavaScript" itemprop="knowsAbout">JS</abbr>. Il en va de même pour le <abbr title="Hypertext Preprocessor" itemprop="knowsAbout">PHP</abbr>, le <abbr title="Structured Query Language" itemprop="knowsAbout">SQL</abbr> et les autres langages dit back-end. Enfin, grâce à mon expérience d’illustrateur et designer freelance, je suis en mesure d’utiliser les logiciels de la suite <span itemprop="knowsAbout">Adobe</span> ainsi que <span itemprop="knowsAbout">Figma</span>.
@@ -117,9 +107,7 @@
             </section>
         </section>
         <section class="main__portfolioIllu" itemscope itemtype="https://schema.org/CreativeWork">
-            <h2 class="portfolioIllu__title" itemprop="about">
-                Portfolio d'illustration
-            </h2>
+            <h2 class="portfolioIllu__title hidden" itemprop="about">Portfolio d'illustration</h2>
             <ul class="portfolioIllu__ul">
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
@@ -169,9 +157,7 @@
 
         </section>
         <section class="main__portfolioWd">
-            <h2 class="portfolioWd__title">
-                Portfolio de design web
-            </h2>
+            <h2 class="portfolioWd__title hidden">Portfolio de design web</h2>
             <div class="portfolioWd__group">
                 <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
@@ -491,9 +477,7 @@
             </div>
         </section>
         <section class="main__socials">
-            <h2 class="socials__title">
-                Mes réseaux sociaux
-            </h2>
+            <h2 class="socials__title hidden">Mes réseaux sociaux</h2>
             <ul class="main__socials__ul">
                 <li class="main__socials__item">
                     <a class="main__socials__link" href="https://twitter.com/nat60038">
@@ -524,9 +508,7 @@
             <p class="footer__text">
                 Vous voulez me contacter pour présenter votre projet, commissionner une illustration ou juste poser une question&nbsp;? C'est simple, remplissez le formulaire de contact&nbsp;!
             </p>
-            <h2 class="footer__title"><a id="contact"></a>
-                Formulaire de contact
-            </h2>
+            <h2 class="footer__title"><a id="contact"></a>Formulaire de contact</h2>
             <form class="footer__form">
                 <label class="form__label" for="f_name">Nom de famille</label>
                 <input class="form__input" id="f_name" name="f_name" type="text" placeholder="Nom de famille">
@@ -540,9 +522,7 @@
             </form>
         </section>
         <section class="footer__slider">
-            <h2 class="slider__title">
-                Carrousel d'illustration
-            </h2>
+            <h2 class="slider__title hidden">Carrousel d'illustration</h2>
             <ul class="slider__ul" itemscope itemtype="https://schema.org/CreativeWork">
                 <li class="slider__item">
                     <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
