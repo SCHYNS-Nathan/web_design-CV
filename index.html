@@ -21,7 +21,7 @@
 </head>
 <body>
 <!-- ----------------- HTML ----------------- -->
-<!-- Portfolio WD SVG: Régler problème espacement, Ajouter article en pop up lorsque l'on clique sur une image -->
+<!-- Portfolio WD SVG: Ajouter article en pop up lorsque l'on clique sur une image -->
 <!-- Illustration principale au propre -->
 <!-- nav au clavier et voiceOver, JS désactivé, test sur différents navigateur, ... -->
 
@@ -30,7 +30,7 @@
 <!-- Utiliser des srcset pour les images "grande" -->
 
 <!-- ----------------- CSS ----------------- -->
-<!-- Corriger form -->
+<!-- Ajouter 2 breaking point (- de 340 et + de 1xxx -->
 
 <!-- CSS animation -->
 <!-- unité de mesure (px -> em / % -->
@@ -526,14 +526,22 @@
             </p>
             <h2 class="footer__title">Formulaire de contact</h2>
             <form class="footer__form">
-                <label class="form__label" for="f_name">Nom</label>
-                <input class="form__input" id="f_name" name="f_name" type="text" placeholder="Nom">
-                <label class="form__label" for="f_firstname">Prénom</label>
-                <input class="form__input" id="f_firstname" name="f_firstname" type="text" placeholder="Prénom">
-                <label class="form__label" for="f_email">Adresse email</label>
-                <input class="form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email" size="28">
-                <label class="form__label" for="f_message">Votre message</label>
-                <textarea class="form__input" id="f_message" name="f_message" rows="5" cols="50" placeholder="Écrivez vote message ici"></textarea>
+                <div class="form__group">
+                    <label class="form__label" for="f_name">Nom</label>
+                    <input class="form__input" id="f_name" name="f_name" type="text" placeholder="Nom">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="f_firstname">Prénom</label>
+                    <input class="form__input" id="f_firstname" name="f_firstname" type="text" placeholder="Prénom">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="f_email">Adresse email</label>
+                    <input class="form__input" id="f_email" name="f_email" type="email" placeholder="Adresse email" size="28">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="f_message">Votre message</label>
+                    <textarea class="form__input" id="f_message" name="f_message" rows="5" cols="50" placeholder="Écrivez vote message ici"></textarea>
+                </div>
                 <br>
                 <button class="form__button" type="submit">Envoyer</button>
             </form>
