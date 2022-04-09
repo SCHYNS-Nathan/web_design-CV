@@ -78,11 +78,11 @@ header {
 .socials__item:last-child:hover {
     background-color: #13AEA2;
 }
-.socials__item svg {
+.socials__item svg, .main__socials__item svg {
     align-self: center;
     fill: #ffffff;
 }
-.socials__item svg:active {
+.socials__item svg:active, .main__socials__item svg:active {
     fill: #282F39;
 }
 .socials__link {
@@ -153,7 +153,7 @@ canvas, .banner__bird {
     background-color: #ffffff;
 }
 .intro__text {
-    margin: 10px 0 20px;
+    margin: 10px 0 30px;
 }
 .intro__text a {
     color: #13AEA2;
@@ -180,7 +180,7 @@ section:last-child .intro__text {
 
 .portfolioIllu__promoText {
     font-size: 16px;
-    margin: 30px 25px 20px;
+    margin: 30px 25px 15px;
     text-align: center;
 }
 .portfolioIllu__promoButton {
@@ -228,7 +228,7 @@ section:last-child .intro__text {
 }
 
 .main__socials {
-    margin: 30px auto 20px;
+    margin: 50px auto 15px;
 }
 .main__socials__ul {
     display: flex;
@@ -357,7 +357,7 @@ section:last-child .intro__text {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
         column-gap: 25px;
-        margin: 30px 20px 0;
+        margin: 50px 20px 0;
     }
     .portfolioWd__clientName {
         font-size: 16px;
@@ -461,7 +461,8 @@ section:last-child .intro__text {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
         column-gap: 25px;
-        margin: 50px 20px 0;
+        margin: 50px auto 0;
+        width: 75vw;
     }
     .portfolioWd__clientName {
         font-size: 16px;
@@ -580,7 +581,7 @@ section:last-child .intro__text {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(3, auto);
         column-gap: 30px;
-        margin: 30px 35px 0;
+        margin: 50px 35px 0;
     }
     .portfolioWd__clientName {
         font-size: 16px;
@@ -706,7 +707,7 @@ section:last-child .intro__text {
     }
 
     .main__portfolioWd {
-        margin: 30px 35px 0;
+        margin: 50px 35px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(2, auto);
@@ -770,7 +771,7 @@ section:last-child .intro__text {
 
     .main__portfolioWd {
         display: block;
-        width: 80%;
+        width: 70%;
         margin: 50px auto 0;
     }
     .portfolioWd__clientName {
@@ -803,9 +804,14 @@ section:last-child .intro__text {
 /* ---------------  FOCUS STYLE  --------------- */
 a:focus {
     color: #DD5172;
-    outline: 2px solid #DD5172;
+    outline: none;
 }
 a:focus img {
+    color: #DD5172;
+    outline: 2px solid #DD5172;
+    z-index: 10;
+}
+a:focus .portfolioIllu__promoButton {
     color: #DD5172;
     outline: 2px solid #DD5172;
 }
@@ -825,17 +831,17 @@ a:focus img {
     border-radius: 32px;
     outline: none;
 }
-.main__socials__item a:focus {
-    background-color: #13AEA2;
-    outline: none;
-}
-
-.nav__button:focus + svg {
+.nav__button:focus + div .nav__svg {
     background-color: #496E77;
     outline: none;
 }
 .nav__link:focus {
     color: #FFC500;
+    outline: none;
+}
+
+.main__socials__item a:focus {
+    background-color: #13AEA2;
     outline: none;
 }
 
@@ -845,6 +851,6 @@ a:focus img {
 }
 .form__button:focus {
     background-color: #DD5172;
-    outline: 2px solid #ffffff;
+    outline: none;
 }
 
