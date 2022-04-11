@@ -39,7 +39,6 @@ body, button {
 }
 .hidden {
     position: absolute;
-    top: -10000px;
     left: -10000px;
 }
 .footer__title {
@@ -702,7 +701,8 @@ section:last-child .intro__text {
         width: 35vw;
     }
     .portfolioIllu__promoText {
-        width: 60%;
+        font-size: 24px;
+        width: 80%;
         margin: 30px auto 20px;
     }
 
@@ -779,27 +779,48 @@ section:last-child .intro__text {
     }
 }
 @media (min-width: 1200px) {
-    .main__intro {
-        margin: -408px 10vw 0;
+    main {
+        width: 1200px;
+        margin: auto ;
     }
+    .main__intro {
+        margin: -408px 0 0;
+    }
+    .intro__title {
+        font-size: 26px;
+    }
+    .intro__text {
+        font-size: 20px;
+    }
+
     .portfolioIllu__ul {
-        margin: 10px 10vw 0;
-        grid-template-rows: 17.5vw 17.5vw;
+        margin: 10px 0 0;
+        grid-template-rows: 210px 210px;
+    }
+    .portfolioIllu__promoButton {
+        width: 500px;
     }
     .main__portfolioWd {
-        margin: 30px 10vw 0;
+        margin: 50px 0 0;
     }
     .footer__contact {
-        margin: 30px 10vw 0;
+        width: 1200px;
+        margin: 30px auto 0;
+    }
+    .footer__text {
+        font-size: 26px;
+    }
+    .form__button {
+        max-width: 600px;
     }
     .slider__ul {
-        margin: 2px 10vw 0;
+        width: 1250px;
+        margin: 2px auto 0;
     }
 }
+@media (prefers-color-scheme: dark) {
 
-/* ---------------  CSS ANIMATION  --------------- */
-
-
+}
 
 /* ---------------  FOCUS STYLE  --------------- */
 a:focus {
@@ -807,12 +828,10 @@ a:focus {
     outline: none;
 }
 a:focus img {
-    color: #DD5172;
     outline: 2px solid #DD5172;
     z-index: 10;
 }
 a:focus .portfolioIllu__promoButton {
-    color: #DD5172;
     outline: 2px solid #DD5172;
 }
 
@@ -833,6 +852,7 @@ a:focus .portfolioIllu__promoButton {
 }
 .nav__button:focus + div .nav__svg {
     background-color: #496E77;
+    fill: #282F39;
     outline: none;
 }
 .nav__link:focus {
@@ -854,3 +874,49 @@ a:focus .portfolioIllu__promoButton {
     outline: none;
 }
 
+
+/* ---------------  CSS ANIMATION  --------------- */
+.portfolioIllu__image {
+    transition: all .3s ease-in-out;
+}
+.portfolioIllu__image:hover {
+    transform: scale(0.9);
+}
+
+.portfolioWd__svg {
+    transition: all .15s ease-in-out;
+}
+.portfolioWd__svg:hover {
+    transform: rotate(10deg);
+}
+@-webkit-keyframes spin-scale {
+    50%{
+        transform: rotate(360deg) scale(2);
+    }
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
+}
+
+
+.portfolioIllu__promoButton {
+    transition: all .5s ease-in-out;
+}
+.portfolioIllu__promoButton:hover {
+    animation-name: pop;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}

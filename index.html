@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<html lang="fr">
 <head>
     <meta name="author" content="Nathan Schyns">
     <meta name="description" content="Hey ! Je suis Nathan Schyns, un créatif belge à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore ! (Recréation du site de Denise Chandler dans le cadre du cours de design web donné à la Haute École de la Province de Liège.)">
@@ -21,31 +21,31 @@
 </head>
 <body>
 <!-- ----------------- HTML ----------------- -->
-<!-- Portfolio WD SVG: Ajouter article en pop up lorsque l'on clique sur une image -->
 <!-- Illustration principale et secondaire (background form) au propre -->
-<!-- nav au clavier et voiceOver, JS désactivé, test sur différents navigateur, ... -->
-
-
-<!-- README sur github (URL site de réf, vidéo interaction, analyse du CV comme le site de la HEPL, ... ) -->
 <!-- Utiliser des srcset pour les images "grande" -->
 
 <!-- ----------------- CSS ----------------- -->
-<!-- Revoir espacement -->
-<!-- Gérer couleur pour les modes sombres -->
+<!-- Gérer couleur pour les modes sombres ??? -->
 
 
 <!-- CSS animation -->
 <!-- unité de mesure (px -> em / % -->
+<!-- code propre (mettre des max/min-width quand c'est possible,... ) -->
 
 <!-- ----------------- JS ----------------- -->
 <!-- Canvas -->
 <!-- Apparition fondue -->
+
+<!-- OTHERS -->
+<!-- README sur github (URL site de réf, vidéo interaction, analyse du CV comme le site de la HEPL, ... ) -->
     <header class="header">
-        <h1 class="header__title hidden" itemscope itemtype="https://schema.org/Person">
+        <h1 class="header__title hidden" itemscope itemtype="https://schema.org/Person" aria-level="1">
             <span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span>
         </h1>
         <section class="header__socials">
-            <h2 class="socials__title hidden">Mes réseaux sociaux</h2>
+            <h2 class="socials__title hidden" aria-level="2">
+                Mes réseaux sociaux
+            </h2>
             <ul class="socials__ul">
                 <li class="socials__item">
                     <a class="socials__link" href="https://twitter.com/nat60038" title="Se rendre sur ma page Twitter">
@@ -71,32 +71,32 @@
             </ul>
         </section>
         <nav class="header__nav">
-            <h2 class="nav__title hidden">Menu de Navigation</h2>
+            <h2 class="nav__title hidden" aria-level="2">Menu de Navigation</h2>
             <div class="nav__burger">
-                <label class="nav__label">
-                    <input class="nav__button hidden" type="checkbox">
-                    <div class="nav__groupSvg">
+                <input class="nav__button hidden" type="checkbox" id="burgerMenu">
+                <div class="nav__groupSvg">
+                    <label class="nav__label" for="burgerMenu">
                         <svg class="nav__svg" width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="nav__line" d="M3 3H33" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
                             <path class="nav__line" d="M3 15H33" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
                             <path class="nav__line" d="M3 27H33" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
                         </svg>
-                    </div>
-                    <ul class="nav__ul">
-                        <li class="nav__item">
-                            <a class="nav__link" href="index.html" title="Recharger la page d'accueil">Accueil</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="index.html" title="Se rendre sur la page dessin">Dessin</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">Portfolio</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#contact" title="Naviguer jusqu'au formulaire de contact de cette page">Contact</a>
-                        </li>
-                    </ul>
-                </label>
+                    </label>
+                </div>
+                <ul class="nav__ul">
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html" title="Recharger la page d'accueil">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html" title="Se rendre sur la page dessin">Dessin</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="https://www.behance.net/nathanschyns" title="Se rendre sur mon portfolio behance">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#contact" title="Naviguer jusqu'au formulaire de contact de cette page">Contact</a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <svg class="banner">
@@ -108,17 +108,17 @@
     </header>
     <main class="main">
         <section class="main__intro" itemscope itemtype="https://schema.org/Person">
-            <h2 class="main__title hidden">À propos de moi</h2>
+            <h2 class="main__title hidden" aria-level="2">À propos de moi</h2>
             <section class="main__paragraph">
-                <h3 class="intro__title">Hey ! Je suis <span itemprop="givenName">Nathan</span>, un <span itemprop="jobTitle">designer web</span> & <span itemprop="jobTitle">illustrateur</span> <span itemprop="nationality">belge</span>.</h3>
+                <h3 class="intro__title" aria-level="3">Hey ! Je suis <span itemprop="givenName">Nathan</span>, un <span itemprop="jobTitle">designer web</span> & <span itemprop="jobTitle">illustrateur</span> <span itemprop="nationality">belge</span>.</h3>
                 <p class="intro__text">
                     Je suis un jeune créatif à votre service pour tous vos projets concernant le web, l’illustration et bien plus encore&nbsp;!<br>
                     Étant à la croisée de l’univers créatif de l’illustration et technique du design web, je suis en mesure de créer votre site du premier croquis à la dernière ligne de code.<br>
-                    Si vous avez la moindre question à me poser par rapport à vos projets, je suis joignable via <a id="email" href="mailto: nathan.schyns@student.hepl.be" title="Ouvre votre service email de préférence">mon adresse email</a>. Mais vous pouvez aussi me contacter via mes réseaux sociaux si vous préférez&nbsp;!
+                    Si vous avez la moindre question à me poser par rapport à vos projets, je suis joignable via <a id="email" href="mailto:nathan.schyns@student.hepl.be" title="Ouvre votre service email de préférence">mon adresse email</a>. Mais vous pouvez aussi me contacter via mes réseaux sociaux si vous préférez&nbsp;!
                 </p>
             </section>
             <section class="main__paragraph">
-                <h3 class="intro__title">Mon parcours et mes compétences.</h3>
+                <h3 class="intro__title" aria-level="3">Mon parcours et mes compétences.</h3>
                 <p class="intro__text">
                     Durant ma carrière, j’ai eu la chance de travailler sur de nombreux projets. Que ce soit des pages web responsives, des designs d’applications mobiles ou encore un livre muet pour enfants, j’ai l’habitude de m’exprimer au travers de supports très variés&nbsp;!<br>
                     Je maîtrise donc les langages front-end tel que l’<abbr title="HyperText Markup Language" itemprop="knowsAbout">HTML</abbr>, le <abbr title="Cascading Style Sheets" itemprop="knowsAbout">CSS</abbr> ou encore le <abbr title="JavaScript" itemprop="knowsAbout">JS</abbr>. Il en va de même pour le <abbr title="Hypertext Preprocessor" itemprop="knowsAbout">PHP</abbr>, le <abbr title="Structured Query Language" itemprop="knowsAbout">SQL</abbr> et les autres langages dit back-end. Enfin, grâce à mon expérience d’illustrateur et designer freelance, je suis en mesure d’utiliser les logiciels de la suite <span itemprop="knowsAbout">Adobe</span> ainsi que <span itemprop="knowsAbout">Figma</span>.
@@ -126,7 +126,7 @@
             </section>
         </section>
         <section class="main__portfolioIllu" itemscope itemtype="https://schema.org/CreativeWork">
-            <h2 class="portfolioIllu__title hidden" itemprop="about">Portfolio d'illustration</h2>
+            <h2 class="portfolioIllu__title hidden" itemprop="about" aria-level="2">Portfolio d'illustration</h2>
             <ul class="portfolioIllu__ul">
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
@@ -176,327 +176,319 @@
 
         </section>
         <section class="main__portfolioWd">
-            <h2 class="portfolioWd__title hidden">Portfolio de design web</h2>
+            <h2 class="portfolioWd__title hidden" aria-level="2">Portfolio de design web</h2>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <rect width="336" height="66" transform="matrix(1 0 0 -1 14 238)" fill="#B63551"/>
-                    <rect x="82" y="93" width="200" height="126" rx="4" fill="#416E7C"/>
-                    <rect x="146" y="45" width="72" height="72" rx="36" fill="#DD5172"/>
-                    <rect x="18" y="38" width="12" height="12" rx="6" fill="#FFD355"/>
-                    <rect x="34" y="38" width="12" height="12" rx="6" fill="#DD5172"/>
-                    <rect x="50" y="38" width="12" height="12" rx="6" fill="#13AEA2"/>
-                    <rect x="330" y="36" width="16" height="16" rx="8" fill="#FFD355"/>
-                    <rect x="90" y="117" width="60" height="94" fill="#13AEA2"/>
-                    <rect x="214" y="117" width="60" height="94" fill="#13AEA2"/>
-                    <path d="M82 226C82 223.791 83.7909 222 86 222H142C144.209 222 146 223.791 146 226V238H82V226Z" fill="#FFD355"/>
-                    <path d="M218 226C218 223.791 219.791 222 222 222H278C280.209 222 282 223.791 282 226V238H218V226Z" fill="#FFD355"/>
-                    <path d="M150 226C150 223.791 151.791 222 154 222H210C212.209 222 214 223.791 214 226V238H150V226Z" fill="#FFD355"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <rect x="261" y="116" width="8" height="8" rx="4" fill="#FFD355"/>
-                    <rect x="351" y="116" width="8" height="8" rx="2" fill="#FFD355"/>
-                    <rect x="271" y="116" width="8" height="8" rx="4" fill="#DD5172"/>
-                    <rect x="281" y="116" width="8" height="8" rx="4" fill="#13AEA2"/>
-                    <rect width="106" height="48" transform="matrix(1 0 0 -1 257 206)" fill="#416E7C"/>
-                    <rect x="294" y="122" width="32" height="32" rx="16" fill="#DD5172"/>
-                    <rect x="261" y="162" width="98" height="40" fill="#13AEA2"/>
-                    <rect x="257" y="206" width="36" height="20" fill="#13AEA2"/>
-                    <rect x="257" y="226" width="36" height="12" fill="#FFD355"/>
-                    <rect x="327" y="206" width="36" height="20" fill="#FFD355"/>
-                    <rect x="327" y="226" width="36" height="12" fill="#DD5172"/>
-                    <rect x="293" y="206" width="34" height="20" fill="#DD5172"/>
-                    <rect x="293" y="226" width="34" height="12" fill="#13AEA2"/>
+                <a class="portfolioWd__link" href="https://denisechandler.com/" title="Se rendre sur le site de Denise Chandler" hreflang="en">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <rect width="336" height="66" transform="matrix(1 0 0 -1 14 238)" fill="#B63551"/>
+                        <rect x="82" y="93" width="200" height="126" rx="4" fill="#416E7C"/>
+                        <rect x="146" y="45" width="72" height="72" rx="36" fill="#DD5172"/>
+                        <rect x="18" y="38" width="12" height="12" rx="6" fill="#FFD355"/>
+                        <rect x="34" y="38" width="12" height="12" rx="6" fill="#DD5172"/>
+                        <rect x="50" y="38" width="12" height="12" rx="6" fill="#13AEA2"/>
+                        <rect x="330" y="36" width="16" height="16" rx="8" fill="#FFD355"/>
+                        <rect x="90" y="117" width="60" height="94" fill="#13AEA2"/>
+                        <rect x="214" y="117" width="60" height="94" fill="#13AEA2"/>
+                        <path d="M82 226C82 223.791 83.7909 222 86 222H142C144.209 222 146 223.791 146 226V238H82V226Z" fill="#FFD355"/>
+                        <path d="M218 226C218 223.791 219.791 222 222 222H278C280.209 222 282 223.791 282 226V238H218V226Z" fill="#FFD355"/>
+                        <path d="M150 226C150 223.791 151.791 222 154 222H210C212.209 222 214 223.791 214 226V238H150V226Z" fill="#FFD355"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <rect x="261" y="116" width="8" height="8" rx="4" fill="#FFD355"/>
+                        <rect x="351" y="116" width="8" height="8" rx="2" fill="#FFD355"/>
+                        <rect x="271" y="116" width="8" height="8" rx="4" fill="#DD5172"/>
+                        <rect x="281" y="116" width="8" height="8" rx="4" fill="#13AEA2"/>
+                        <rect width="106" height="48" transform="matrix(1 0 0 -1 257 206)" fill="#416E7C"/>
+                        <rect x="294" y="122" width="32" height="32" rx="16" fill="#DD5172"/>
+                        <rect x="261" y="162" width="98" height="40" fill="#13AEA2"/>
+                        <rect x="257" y="206" width="36" height="20" fill="#13AEA2"/>
+                        <rect x="257" y="226" width="36" height="12" fill="#FFD355"/>
+                        <rect x="327" y="206" width="36" height="20" fill="#FFD355"/>
+                        <rect x="327" y="226" width="36" height="12" fill="#DD5172"/>
+                        <rect x="293" y="206" width="34" height="20" fill="#DD5172"/>
+                        <rect x="293" y="226" width="34" height="12" fill="#13AEA2"/>
                     </svg>
-                <h3 class="portfolioWd__clientName">
-                    Denise Chandler
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Denise Chandler
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <path d="M14 45L350 45" stroke="#EBEBEB" stroke-width="2"/>
-                    <rect x="170" y="34" width="160" height="8" rx="4" fill="#FFD355"/>
-                    <path d="M14 64H350V144H14V64Z" fill="#416E7C"/>
-                    <rect x="34" y="48" width="24" height="14" fill="#DD5172"/>
-                    <rect x="34" y="156" width="296" height="14" fill="#DD5172"/>
-                    <rect x="34" y="190" width="140" height="48" fill="#13AEA2"/>
-                    <rect x="190" y="190" width="140" height="48" fill="#DD5172"/>
-                    <rect x="230" y="64" width="100" height="80" fill="#13AEA2"/>
-                    <rect x="66" y="51" width="20" height="8" fill="#FFD355"/>
-                    <rect x="154" y="51" width="20" height="8" fill="#FFD355"/>
-                    <rect x="110" y="51" width="20" height="8" fill="#FFD355"/>
-                    <rect x="88" y="51" width="20" height="8" fill="#FFD355"/>
-                    <rect x="176" y="51" width="20" height="8" fill="#FFD355"/>
-                    <rect x="132" y="51" width="20" height="8" fill="#FFD355"/>
-                    <rect x="306" y="50" width="24" height="10" fill="#DD5172"/>
-                    <rect x="292" y="50" width="10" height="10" fill="#13AEA2"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <path d="M257 134H363V194H257V134Z" fill="#B63551"/>
-                    <rect x="261" y="116" width="24" height="14" fill="#FFD355"/>
-                    <rect x="319" y="134" width="40" height="60" fill="#DD5172"/>
-                    <rect x="289" y="118" width="10" height="10" fill="#13AEA2"/>
-                    <rect x="261" y="201" width="98" height="14" fill="#FFD355"/>
-                    <rect x="261" y="219" width="98" height="19" fill="#13AEA2"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Haute École de la Province de Liège (HEPL)
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://hepl.be/fr" title="Se rendre sur le site de la HEPL">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <path d="M14 45L350 45" stroke="#EBEBEB" stroke-width="2"/>
+                        <rect x="170" y="34" width="160" height="8" rx="4" fill="#FFD355"/>
+                        <path d="M14 64H350V144H14V64Z" fill="#416E7C"/>
+                        <rect x="34" y="48" width="24" height="14" fill="#DD5172"/>
+                        <rect x="34" y="156" width="296" height="14" fill="#DD5172"/>
+                        <rect x="34" y="190" width="140" height="48" fill="#13AEA2"/>
+                        <rect x="190" y="190" width="140" height="48" fill="#DD5172"/>
+                        <rect x="230" y="64" width="100" height="80" fill="#13AEA2"/>
+                        <rect x="66" y="51" width="20" height="8" fill="#FFD355"/>
+                        <rect x="154" y="51" width="20" height="8" fill="#FFD355"/>
+                        <rect x="110" y="51" width="20" height="8" fill="#FFD355"/>
+                        <rect x="88" y="51" width="20" height="8" fill="#FFD355"/>
+                        <rect x="176" y="51" width="20" height="8" fill="#FFD355"/>
+                        <rect x="132" y="51" width="20" height="8" fill="#FFD355"/>
+                        <rect x="306" y="50" width="24" height="10" fill="#DD5172"/>
+                        <rect x="292" y="50" width="10" height="10" fill="#13AEA2"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <path d="M257 134H363V194H257V134Z" fill="#B63551"/>
+                        <rect x="261" y="116" width="24" height="14" fill="#FFD355"/>
+                        <rect x="319" y="134" width="40" height="60" fill="#DD5172"/>
+                        <rect x="289" y="118" width="10" height="10" fill="#13AEA2"/>
+                        <rect x="261" y="201" width="98" height="14" fill="#FFD355"/>
+                        <rect x="261" y="219" width="98" height="19" fill="#13AEA2"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Haute École de la Province de Liège (HEPL)
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <path d="M14 51L350 51" stroke="#EBEBEB" stroke-width="2"/>
-                    <rect x="16" y="34" width="14" height="14" fill="#FFD355"/>
-                    <rect x="32" y="34" width="40" height="14" fill="#13AEA2"/>
-                    <rect x="76" y="34" width="28" height="14" fill="#DD5172"/>
-                    <rect x="138" y="34" width="28" height="14" fill="#DD5172"/>
-                    <rect x="106" y="34" width="30" height="14" fill="#DD5172"/>
-                    <rect x="324" y="34" width="24" height="14" rx="2" fill="#DD5172"/>
-                    <rect x="298" y="34" width="24" height="14" rx="2" fill="#13AEA2"/>
-                    <rect x="170" y="34" width="124" height="14" rx="2" fill="#FFD355"/>
-                    <path d="M26 77C26 71.4772 30.4772 67 36 67H328C333.523 67 338 71.4772 338 77V238H26V77Z" fill="#416E7C"/>
-                    <path d="M70 91C70 86.5817 73.5817 83 78 83H170C174.418 83 178 86.5817 178 91V144H78C73.5817 144 70 140.418 70 136V91Z" fill="#FFD355"/>
-                    <path d="M178 156V144H166L178 156Z" fill="#FFD355"/>
-                    <path d="M186 156V144H198L186 156Z" fill="#13AEA2"/>
-                    <path d="M186 91C186 86.5817 189.582 83 194 83H286C290.418 83 294 86.5817 294 91V136C294 140.418 290.418 144 286 144H186V91Z" fill="#13AEA2"/>
-                    <rect x="102" y="167" width="160" height="30" fill="#DD5172"/>
-                    <rect x="70" y="213" width="48" height="25" fill="#13AEA2"/>
-                    <rect x="246" y="213" width="48" height="25" fill="#13AEA2"/>
-                    <rect x="188" y="213" width="48" height="25" fill="#13AEA2"/>
-                    <rect x="128" y="213" width="48" height="25" fill="#13AEA2"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <path d="M265 203C265 198.582 268.582 195 273 195H347C351.418 195 355 198.582 355 203V238H265V203Z" fill="#13AEA2"/>
-                    <rect x="342" y="114" width="19" height="11" rx="2" fill="#13AEA2"/>
-                    <rect x="321" y="114" width="19" height="11" rx="2" fill="#FFD355"/>
-                    <rect x="259" y="114" width="11" height="11" fill="#FFD355"/>
-                    <rect x="308" y="114" width="11" height="11" fill="#13AEA2"/>
-                    <rect x="272" y="114" width="20" height="11" fill="#DD5172"/>
-                    <path d="M265 143C265 138.582 268.582 135 273 135H347C351.418 135 355 138.582 355 143V183.466H273C268.582 183.466 265 179.884 265 175.466V143Z" fill="#DD5172"/>
-                    <path d="M355 193V183.466H345L355 193Z" fill="#DD5172"/>
-                    <path d="M257 128L363 128" stroke="#EBEBEB" stroke-width="2"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Stack Overflow
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://stackoverflow.com/" title="Se rendre sur Stack Overflow" hreflang="en">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <path d="M14 51L350 51" stroke="#EBEBEB" stroke-width="2"/>
+                        <rect x="16" y="34" width="14" height="14" fill="#FFD355"/>
+                        <rect x="32" y="34" width="40" height="14" fill="#13AEA2"/>
+                        <rect x="76" y="34" width="28" height="14" fill="#DD5172"/>
+                        <rect x="138" y="34" width="28" height="14" fill="#DD5172"/>
+                        <rect x="106" y="34" width="30" height="14" fill="#DD5172"/>
+                        <rect x="324" y="34" width="24" height="14" rx="2" fill="#DD5172"/>
+                        <rect x="298" y="34" width="24" height="14" rx="2" fill="#13AEA2"/>
+                        <rect x="170" y="34" width="124" height="14" rx="2" fill="#FFD355"/>
+                        <path d="M26 77C26 71.4772 30.4772 67 36 67H328C333.523 67 338 71.4772 338 77V238H26V77Z" fill="#416E7C"/>
+                        <path d="M70 91C70 86.5817 73.5817 83 78 83H170C174.418 83 178 86.5817 178 91V144H78C73.5817 144 70 140.418 70 136V91Z" fill="#FFD355"/>
+                        <path d="M178 156V144H166L178 156Z" fill="#FFD355"/>
+                        <path d="M186 156V144H198L186 156Z" fill="#13AEA2"/>
+                        <path d="M186 91C186 86.5817 189.582 83 194 83H286C290.418 83 294 86.5817 294 91V136C294 140.418 290.418 144 286 144H186V91Z" fill="#13AEA2"/>
+                        <rect x="102" y="167" width="160" height="30" fill="#DD5172"/>
+                        <rect x="70" y="213" width="48" height="25" fill="#13AEA2"/>
+                        <rect x="246" y="213" width="48" height="25" fill="#13AEA2"/>
+                        <rect x="188" y="213" width="48" height="25" fill="#13AEA2"/>
+                        <rect x="128" y="213" width="48" height="25" fill="#13AEA2"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <path d="M265 203C265 198.582 268.582 195 273 195H347C351.418 195 355 198.582 355 203V238H265V203Z" fill="#13AEA2"/>
+                        <rect x="342" y="114" width="19" height="11" rx="2" fill="#13AEA2"/>
+                        <rect x="321" y="114" width="19" height="11" rx="2" fill="#FFD355"/>
+                        <rect x="259" y="114" width="11" height="11" fill="#FFD355"/>
+                        <rect x="308" y="114" width="11" height="11" fill="#13AEA2"/>
+                        <rect x="272" y="114" width="20" height="11" fill="#DD5172"/>
+                        <path d="M265 143C265 138.582 268.582 135 273 135H347C351.418 135 355 138.582 355 143V183.466H273C268.582 183.466 265 179.884 265 175.466V143Z" fill="#DD5172"/>
+                        <path d="M355 193V183.466H345L355 193Z" fill="#DD5172"/>
+                        <path d="M257 128L363 128" stroke="#EBEBEB" stroke-width="2"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Stack Overflow
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <path d="M14 98H350V238H14V98Z" fill="#416E7C"/>
-                    <path d="M14 32H50V44H14V32Z" fill="#DD5172"/>
-                    <path d="M332 32H350V50H332V32Z" fill="#DD5172"/>
-                    <path d="M300 32H332V44H300V32Z" fill="#FFD355"/>
-                    <rect x="22" y="82" width="124" height="32" fill="#13AEA2"/>
-                    <rect x="193" y="117" width="148" height="22" fill="#FFD355"/>
-                    <rect x="22" y="163" width="319" height="30" fill="#DD5172"/>
-                    <rect x="100" y="200" width="80" height="24" fill="#13AEA2"/>
-                    <rect x="184" y="200" width="80" height="24" fill="#13AEA2"/>
-                    <rect x="162" y="86" width="24" height="24" fill="#DD5172"/>
-                    <rect x="193" y="86" width="24" height="24" fill="#DD5172"/>
-                    <rect x="224" y="86" width="24" height="24" fill="#DD5172"/>
-                    <rect x="255" y="86" width="24" height="24" fill="#DD5172"/>
-                    <rect x="286" y="86" width="24" height="24" fill="#DD5172"/>
-                    <rect x="317" y="86" width="24" height="24" fill="#DD5172"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <path d="M257 155H363V238H257V155Z" fill="#B63551"/>
-                    <path d="M257 112H281V120H257V112Z" fill="#FFD355"/>
-                    <path d="M261 170H293V194H261V170Z" fill="#DD5172"/>
-                    <path d="M261 196H293V208H261V196Z" fill="#FFD355"/>
-                    <path d="M295 170H325V194H295V170Z" fill="#DD5172"/>
-                    <path d="M295 196H325V208H295V196Z" fill="#FFD355"/>
-                    <path d="M327 170H359V194H327V170Z" fill="#DD5172"/>
-                    <path d="M327 196H359V208H327V196Z" fill="#FFD355"/>
-                    <path d="M349 112H363V126H349V112Z" fill="#FFD355"/>
-                    <path d="M329 112H349V118H329V112Z" fill="#13AEA2"/>
-                    <rect x="261" y="144" width="98" height="22" fill="#13AEA2"/>
-                    <rect x="277" y="212" width="66" height="8" fill="#13AEA2"/>
-                    <rect x="261" y="226" width="98" height="12" fill="#DD5172"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Super Smash Bros Ultimate
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://www.smashbros.com/fr_FR/" title="Se rendre sur le site Super Smash Bros Ultimate">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <path d="M14 98H350V238H14V98Z" fill="#416E7C"/>
+                        <path d="M14 32H50V44H14V32Z" fill="#DD5172"/>
+                        <path d="M332 32H350V50H332V32Z" fill="#DD5172"/>
+                        <path d="M300 32H332V44H300V32Z" fill="#FFD355"/>
+                        <rect x="22" y="82" width="124" height="32" fill="#13AEA2"/>
+                        <rect x="193" y="117" width="148" height="22" fill="#FFD355"/>
+                        <rect x="22" y="163" width="319" height="30" fill="#DD5172"/>
+                        <rect x="100" y="200" width="80" height="24" fill="#13AEA2"/>
+                        <rect x="184" y="200" width="80" height="24" fill="#13AEA2"/>
+                        <rect x="162" y="86" width="24" height="24" fill="#DD5172"/>
+                        <rect x="193" y="86" width="24" height="24" fill="#DD5172"/>
+                        <rect x="224" y="86" width="24" height="24" fill="#DD5172"/>
+                        <rect x="255" y="86" width="24" height="24" fill="#DD5172"/>
+                        <rect x="286" y="86" width="24" height="24" fill="#DD5172"/>
+                        <rect x="317" y="86" width="24" height="24" fill="#DD5172"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <path d="M257 155H363V238H257V155Z" fill="#B63551"/>
+                        <path d="M257 112H281V120H257V112Z" fill="#FFD355"/>
+                        <path d="M261 170H293V194H261V170Z" fill="#DD5172"/>
+                        <path d="M261 196H293V208H261V196Z" fill="#FFD355"/>
+                        <path d="M295 170H325V194H295V170Z" fill="#DD5172"/>
+                        <path d="M295 196H325V208H295V196Z" fill="#FFD355"/>
+                        <path d="M327 170H359V194H327V170Z" fill="#DD5172"/>
+                        <path d="M327 196H359V208H327V196Z" fill="#FFD355"/>
+                        <path d="M349 112H363V126H349V112Z" fill="#FFD355"/>
+                        <path d="M329 112H349V118H329V112Z" fill="#13AEA2"/>
+                        <rect x="261" y="144" width="98" height="22" fill="#13AEA2"/>
+                        <rect x="277" y="212" width="66" height="8" fill="#13AEA2"/>
+                        <rect x="261" y="226" width="98" height="12" fill="#DD5172"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Super Smash Bros Ultimate
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <path d="M14 32H50V67C50 69.7614 47.7614 72 45 72H14V32Z" fill="#13AEA2"/>
-                    <rect x="112" y="107" width="140" height="20" fill="#DD5172"/>
-                    <rect x="142" y="182" width="80" height="14" fill="#DD5172"/>
-                    <rect x="142" y="212" width="20" height="10" rx="2" fill="#13AEA2"/>
-                    <rect x="202" y="212" width="20" height="10" rx="2" fill="#13AEA2"/>
-                    <rect x="172" y="212" width="20" height="10" rx="2" fill="#13AEA2"/>
-                    <rect x="167" y="85" width="30" height="6" fill="#DD5172"/>
-                    <rect x="167" y="137" width="30" height="12" rx="6" fill="#FFD355"/>
-                    <path d="M323 96C327.418 96 331 92.4183 331 88C331 83.5817 327.418 80 323 80C318.582 80 315 83.5817 315 88C315 92.4183 318.582 96 323 96Z" fill="#FFD355"/>
-                    <path d="M205 88H309" stroke="#FFD355"/>
-                    <path d="M337 88H346" stroke="#FFD355"/>
-                    <path d="M87 88L159 88" stroke="#FFD355"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <path d="M257 112H293V123C293 125.761 290.761 128 288 128H257V112Z" fill="#FFD355"/>
-                    <rect x="283" y="145" width="54" height="20" fill="#13AEA2"/>
-                    <rect x="286" y="198" width="48" height="14" fill="#13AEA2"/>
-                    <rect x="286" y="220" width="20" height="10" rx="2" fill="#FFD355"/>
-                    <rect x="314" y="220" width="20" height="10" rx="2" fill="#FFD355"/>
-                    <rect x="295" y="171" width="30" height="8" rx="4" fill="#DD5172"/>
-                    <path d="M331 138L359 138" stroke="#DD5172"/>
-                    <rect x="295" y="135" width="30" height="6" fill="#13AEA2"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Expodcast
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://expodcast.cmbv.fr/fr" title="Se rendre sur le site Expodcast">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <path d="M14 32H50V67C50 69.7614 47.7614 72 45 72H14V32Z" fill="#13AEA2"/>
+                        <rect x="112" y="107" width="140" height="20" fill="#DD5172"/>
+                        <rect x="142" y="182" width="80" height="14" fill="#DD5172"/>
+                        <rect x="142" y="212" width="20" height="10" rx="2" fill="#13AEA2"/>
+                        <rect x="202" y="212" width="20" height="10" rx="2" fill="#13AEA2"/>
+                        <rect x="172" y="212" width="20" height="10" rx="2" fill="#13AEA2"/>
+                        <rect x="167" y="85" width="30" height="6" fill="#DD5172"/>
+                        <rect x="167" y="137" width="30" height="12" rx="6" fill="#FFD355"/>
+                        <path d="M323 96C327.418 96 331 92.4183 331 88C331 83.5817 327.418 80 323 80C318.582 80 315 83.5817 315 88C315 92.4183 318.582 96 323 96Z" fill="#FFD355"/>
+                        <path d="M205 88H309" stroke="#FFD355"/>
+                        <path d="M337 88H346" stroke="#FFD355"/>
+                        <path d="M87 88L159 88" stroke="#FFD355"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <path d="M257 112H293V123C293 125.761 290.761 128 288 128H257V112Z" fill="#FFD355"/>
+                        <rect x="283" y="145" width="54" height="20" fill="#13AEA2"/>
+                        <rect x="286" y="198" width="48" height="14" fill="#13AEA2"/>
+                        <rect x="286" y="220" width="20" height="10" rx="2" fill="#FFD355"/>
+                        <rect x="314" y="220" width="20" height="10" rx="2" fill="#FFD355"/>
+                        <rect x="295" y="171" width="30" height="8" rx="4" fill="#DD5172"/>
+                        <path d="M331 138L359 138" stroke="#DD5172"/>
+                        <rect x="295" y="135" width="30" height="6" fill="#13AEA2"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Expodcast
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <rect x="14" y="158" width="336" height="80" fill="#416E7C"/>
-                    <path d="M14 55L350 55" stroke="#EBEBEB" stroke-width="2"/>
-                    <rect x="14" y="32" width="51" height="22" fill="#13AEA2"/>
-                    <rect x="26" y="122" width="160" height="24" fill="#DD5172"/>
-                    <rect x="26" y="170" width="160" height="68" fill="#13AEA2"/>
-                    <rect x="329" y="36" width="14" height="14" fill="#FFD355"/>
-                    <rect x="305" y="37" width="20" height="12" fill="#DD5172"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <rect x="257" y="198" width="106" height="40" fill="#416E7C"/>
-                    <rect x="261" y="166" width="52" height="24" fill="#FFD355"/>
-                    <rect x="261" y="206" width="98" height="12" fill="#13AEA2"/>
-                    <rect x="261" y="222" width="98" height="16" fill="#DD5172"/>
-                    <rect x="257" y="112" width="106" height="16" fill="#13AEA2"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Ocean Cleanup
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://theoceancleanup.com/" title="Se rendre sur le site de Ocean Cleanup" hreflang="en">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <rect x="14" y="158" width="336" height="80" fill="#416E7C"/>
+                        <path d="M14 55L350 55" stroke="#EBEBEB" stroke-width="2"/>
+                        <rect x="14" y="32" width="51" height="22" fill="#13AEA2"/>
+                        <rect x="26" y="122" width="160" height="24" fill="#DD5172"/>
+                        <rect x="26" y="170" width="160" height="68" fill="#13AEA2"/>
+                        <rect x="329" y="36" width="14" height="14" fill="#FFD355"/>
+                        <rect x="305" y="37" width="20" height="12" fill="#DD5172"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <rect x="257" y="198" width="106" height="40" fill="#416E7C"/>
+                        <rect x="261" y="166" width="52" height="24" fill="#FFD355"/>
+                        <rect x="261" y="206" width="98" height="12" fill="#13AEA2"/>
+                        <rect x="261" y="222" width="98" height="16" fill="#DD5172"/>
+                        <rect x="257" y="112" width="106" height="16" fill="#13AEA2"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Ocean Cleanup
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <rect x="80" y="44" width="260" height="182" rx="10" fill="#B63551"/>
-                    <rect x="24" y="44" width="46" height="182" rx="10" fill="#DD5172"/>
-                    <rect x="180" y="52" width="60" height="22" fill="#13AEA2"/>
-                    <rect x="249" y="87" width="82" height="122" rx="4" stroke="#FFD355" stroke-width="2"/>
-                    <rect x="88" y="214" width="244" height="8" rx="4" fill="#FFD355"/>
-                    <rect x="88" y="52" width="20" height="16" rx="4" fill="#FFD355"/>
-                    <rect x="320" y="52" width="12" height="12" rx="6" fill="#FFD355"/>
-                    <rect x="304" y="52" width="12" height="12" rx="6" fill="#FFD355"/>
-                    <rect x="288" y="52" width="12" height="12" rx="6" fill="#FFD355"/>
-                    <mask id="path-15-inside-1_332_229" fill="white">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M93 86C90.2386 86 88 88.2386 88 91V98V205C88 207.761 90.2386 210 93 210H237C239.761 210 242 207.761 242 205V98H164V86H93Z"/>
-                    </mask>
-                    <path d="M242 98H244V96H242V98ZM164 98H162V100H164V98ZM164 86H166V84H164V86ZM90 91C90 89.3431 91.3431 88 93 88V84C89.134 84 86 87.134 86 91H90ZM90 98V91H86V98H90ZM90 205V98H86V205H90ZM93 208C91.3431 208 90 206.657 90 205H86C86 208.866 89.134 212 93 212V208ZM237 208H93V212H237V208ZM240 205C240 206.657 238.657 208 237 208V212C240.866 212 244 208.866 244 205H240ZM240 98V205H244V98H240ZM164 100H242V96H164V100ZM162 86V98H166V86H162ZM93 88H164V84H93V88Z" fill="#13AEA2" mask="url(#path-15-inside-1_332_229)"/>
-                    <rect x="104" y="127" width="42" height="42" rx="21" fill="#FFD355"/>
-                    <rect x="154" y="157" width="80" height="12" fill="#FFD355"/>
-                    <path d="M166 86H237C239.761 86 242 88.2386 242 91V96H166V86Z" fill="#DD5172"/>
-                    <rect x="135" y="187" width="60" height="12" fill="#DD5172"/>
-                    <rect x="154" y="127" width="80" height="22" fill="#13AEA2"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <rect x="294" y="120" width="32" height="18" fill="#DD5172"/>
-                    <rect x="294" y="222" width="32" height="12" rx="4" fill="#FFD355"/>
-                    <rect x="259" y="114" width="12" height="12" fill="#FFD355"/>
-                    <rect x="349" y="114" width="12" height="12" rx="6" fill="#13AEA2"/>
-                    <rect x="271" y="142" width="78" height="72" rx="4" fill="#416E7C"/>
-                    <rect x="296" y="164" width="28" height="28" rx="14" fill="#13AEA2"/>
-                    <rect x="275" y="200" width="70" height="12" rx="4" fill="#DD5172"/>
-                    <path d="M310 142H345C347.209 142 349 143.791 349 146V154H310V142Z" fill="#FFD355"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Gartic Phone
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://garticphone.com/fr" title="Se rendre sur le site Gartic Phone">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <rect x="80" y="44" width="260" height="182" rx="10" fill="#B63551"/>
+                        <rect x="24" y="44" width="46" height="182" rx="10" fill="#DD5172"/>
+                        <rect x="180" y="52" width="60" height="22" fill="#13AEA2"/>
+                        <rect x="249" y="87" width="82" height="122" rx="4" stroke="#FFD355" stroke-width="2"/>
+                        <rect x="88" y="214" width="244" height="8" rx="4" fill="#FFD355"/>
+                        <rect x="88" y="52" width="20" height="16" rx="4" fill="#FFD355"/>
+                        <rect x="320" y="52" width="12" height="12" rx="6" fill="#FFD355"/>
+                        <rect x="304" y="52" width="12" height="12" rx="6" fill="#FFD355"/>
+                        <rect x="288" y="52" width="12" height="12" rx="6" fill="#FFD355"/>
+                        <mask id="path-15-inside-1_332_229" fill="white">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M93 86C90.2386 86 88 88.2386 88 91V98V205C88 207.761 90.2386 210 93 210H237C239.761 210 242 207.761 242 205V98H164V86H93Z"/>
+                        </mask>
+                        <path d="M242 98H244V96H242V98ZM164 98H162V100H164V98ZM164 86H166V84H164V86ZM90 91C90 89.3431 91.3431 88 93 88V84C89.134 84 86 87.134 86 91H90ZM90 98V91H86V98H90ZM90 205V98H86V205H90ZM93 208C91.3431 208 90 206.657 90 205H86C86 208.866 89.134 212 93 212V208ZM237 208H93V212H237V208ZM240 205C240 206.657 238.657 208 237 208V212C240.866 212 244 208.866 244 205H240ZM240 98V205H244V98H240ZM164 100H242V96H164V100ZM162 86V98H166V86H162ZM93 88H164V84H93V88Z" fill="#13AEA2" mask="url(#path-15-inside-1_332_229)"/>
+                        <rect x="104" y="127" width="42" height="42" rx="21" fill="#FFD355"/>
+                        <rect x="154" y="157" width="80" height="12" fill="#FFD355"/>
+                        <path d="M166 86H237C239.761 86 242 88.2386 242 91V96H166V86Z" fill="#DD5172"/>
+                        <rect x="135" y="187" width="60" height="12" fill="#DD5172"/>
+                        <rect x="154" y="127" width="80" height="22" fill="#13AEA2"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <rect x="294" y="120" width="32" height="18" fill="#DD5172"/>
+                        <rect x="294" y="222" width="32" height="12" rx="4" fill="#FFD355"/>
+                        <rect x="259" y="114" width="12" height="12" fill="#FFD355"/>
+                        <rect x="349" y="114" width="12" height="12" rx="6" fill="#13AEA2"/>
+                        <rect x="271" y="142" width="78" height="72" rx="4" fill="#416E7C"/>
+                        <rect x="296" y="164" width="28" height="28" rx="14" fill="#13AEA2"/>
+                        <rect x="275" y="200" width="70" height="12" rx="4" fill="#DD5172"/>
+                        <path d="M310 142H345C347.209 142 349 143.791 349 146V154H310V142Z" fill="#FFD355"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Gartic Phone
+                    </h3>
+                </a>
             </div>
             <div class="portfolioWd__group">
-                <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
-                    <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
-                    <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
-                    <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
-                    <rect x="198" y="32" width="140" height="206" fill="#416E7C"/>
-                    <rect x="22" y="40" width="80" height="12" fill="#FFD355"/>
-                    <rect x="56" y="216" width="100" height="16" fill="#FFD355"/>
-                    <rect x="22" y="60" width="168" height="60" fill="#13AEA2"/>
-                    <rect x="22" y="128" width="168" height="80" fill="#DD5172"/>
-                    <rect x="130" y="40" width="60" height="12" fill="#DD5172"/>
-                    <rect x="308" y="40" width="22" height="22" rx="11" fill="#13AEA2"/>
-                    <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
-                    <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
-                    <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
-                    <path d="M270 112H350V162C350 167.523 345.523 172 340 172H280C274.477 172 270 167.523 270 162V112Z" fill="#416E7C"/>
-                    <rect x="270" y="180" width="80" height="12" fill="#FFD355"/>
-                    <rect x="261" y="216" width="98" height="22" fill="#13AEA2"/>
-                    <rect x="279" y="196" width="60" height="12" fill="#DD5172"/>
-                    <rect x="332" y="116" width="14" height="14" rx="7" fill="#13AEA2"/>
-                </svg>
-                <h3 class="portfolioWd__clientName">
-                    Flexbox Froggy
-                </h3>
-                <p class="portfolioWd__siteName">
-
-                </p>
+                <a class="portfolioWd__link" href="https://flexboxfroggy.com/#fr" title="Se rendre sur le site Flexbox Froggy">
+                    <svg class="portfolioWd__svg" width="377" height="262" viewBox="0 0 377 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M345.656 2H18.3445C9.31768 2 2 9.33762 2 18.389V235.611C2 244.662 9.31768 252 18.3445 252H345.656C354.682 252 362 244.662 362 235.611V18.389C362 9.33762 354.682 2 345.656 2Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M14 32H65C65 32 68.0007 15 72.2639 15H138.517C143.509 15 147 32 147 32H248.5H350V238H14V32Z" fill="#262E37"/>
+                        <path d="M22.5 24C24.9853 24 27 21.9853 27 19.5C27 17.0147 24.9853 15 22.5 15C20.0147 15 18 17.0147 18 19.5C18 21.9853 20.0147 24 22.5 24Z" fill="#262E37"/>
+                        <path d="M37.5 24C39.9853 24 42 21.9853 42 19.5C42 17.0147 39.9853 15 37.5 15C35.0147 15 33 17.0147 33 19.5C33 21.9853 35.0147 24 37.5 24Z" fill="#262E37"/>
+                        <path d="M52.5 24C54.9853 24 57 21.9853 57 19.5C57 17.0147 54.9853 15 52.5 15C50.0147 15 48 17.0147 48 19.5C48 21.9853 50.0147 24 52.5 24Z" fill="#262E37"/>
+                        <rect x="198" y="32" width="140" height="206" fill="#416E7C"/>
+                        <rect x="22" y="40" width="80" height="12" fill="#FFD355"/>
+                        <rect x="56" y="216" width="100" height="16" fill="#FFD355"/>
+                        <rect x="22" y="60" width="168" height="60" fill="#13AEA2"/>
+                        <rect x="22" y="128" width="168" height="80" fill="#DD5172"/>
+                        <rect x="130" y="40" width="60" height="12" fill="#DD5172"/>
+                        <rect x="308" y="40" width="22" height="22" rx="11" fill="#13AEA2"/>
+                        <path d="M375 252.219V107.781C375 103.484 371.441 100 367.05 100L252.95 100C248.559 100 245 103.484 245 107.781V252.219C245 256.516 248.559 260 252.95 260H367.05C371.441 260 375 256.516 375 252.219Z" fill="#EBEBEB" stroke="#262E37" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M363 112H257V238H363V112Z" fill="#262E37"/>
+                        <path d="M309.5 254.001C313.09 254.001 316 251.091 316 247.5C316 243.91 313.09 241 309.5 241C305.91 241 303 243.91 303 247.5C303 251.091 305.91 254.001 309.5 254.001Z" fill="#262E37"/>
+                        <path d="M270 112H350V162C350 167.523 345.523 172 340 172H280C274.477 172 270 167.523 270 162V112Z" fill="#416E7C"/>
+                        <rect x="270" y="180" width="80" height="12" fill="#FFD355"/>
+                        <rect x="261" y="216" width="98" height="22" fill="#13AEA2"/>
+                        <rect x="279" y="196" width="60" height="12" fill="#DD5172"/>
+                        <rect x="332" y="116" width="14" height="14" rx="7" fill="#13AEA2"/>
+                    </svg>
+                    <h3 class="portfolioWd__clientName" aria-level="3">
+                        Flexbox Froggy
+                    </h3>
+                </a>
             </div>
         </section>
         <section class="main__socials">
-            <h2 class="socials__title hidden">Mes réseaux sociaux</h2>
+            <h2 class="socials__title hidden" aria-level="2">Mes réseaux sociaux</h2>
             <ul class="main__socials__ul">
                 <li class="main__socials__item">
                     <a class="main__socials__link" href="https://twitter.com/nat60038">
@@ -534,7 +526,7 @@
             <p class="footer__text">
                 Vous voulez me contacter pour présenter votre projet, commissionner une illustration ou juste poser une question&nbsp;? C'est simple, remplissez le formulaire de contact&nbsp;!
             </p>
-            <h2 class="footer__title">Formulaire de contact</h2>
+            <h2 class="footer__title" aria-level="2">Formulaire de contact</h2>
             <form class="footer__form">
                 <div class="form__group">
                     <label class="form__label" for="f_name">Nom</label>
@@ -557,55 +549,55 @@
             </form>
         </section>
         <section class="footer__slider">
-            <h2 class="slider__title hidden">Carrousel d'illustration</h2>
+            <h2 class="slider__title hidden" aria-level="2">Carrousel d'illustration</h2>
             <ul class="slider__ul" itemscope itemtype="https://schema.org/CreativeWork">
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/ike_fanart.jpg" alt="ike_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/samus_fanart.jpg" alt="samus_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/fox_fanart.jpg" alt="fox_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/zelda_fanart.jpg" alt="zelda_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/yoshi_fanart.jpg" alt="yoshi_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/snake_fanart.jpg" alt="snake_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/ganondorf_fanart.jpg" alt="ganondorf_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/ness_fanart.jpg" alt="ness_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/pikachu_fanart.jpg" alt="pikachu_fanart" itemprop="image">
                     </a>
                 </li>
                 <li class="slider__item">
-                    <a class="slider__link" href="index.html" title="Se rendre sur ma page Instagram">
+                    <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                         <img class="slider__img" src="img/mario_fanart.jpg" alt="mario_fanart" itemprop="image">
                     </a>
                 </li>
