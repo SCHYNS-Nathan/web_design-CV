@@ -876,47 +876,111 @@ a:focus .portfolioIllu__promoButton {
 
 
 /* ---------------  CSS ANIMATION  --------------- */
-.portfolioIllu__image {
+
+.socials__item ,#email, .portfolioIllu__image, .intro__text abbr, .form__button {
     transition: all .3s ease-in-out;
 }
+.portfolioWd__svg, .slider__img {
+    transition: all .15s ease-in-out;
+}
+
 .portfolioIllu__image:hover {
     transform: scale(0.9);
 }
-
-.portfolioWd__svg {
-    transition: all .15s ease-in-out;
-}
 .portfolioWd__svg:hover {
-    transform: rotate(10deg);
+    transform: rotate(10deg) scale(1.05);
 }
-@-webkit-keyframes spin-scale {
-    50%{
-        transform: rotate(360deg) scale(2);
-    }
-    100% {
-        transform: rotate(720deg) scale(1);
-    }
+.slider__img:hover {
+    opacity: .5;
 }
 
 
-.portfolioIllu__promoButton {
-    transition: all .5s ease-in-out;
+.nav__button:checked ~ .nav__ul {
+    animation: menu .5s ease-in-out forwards;
 }
 .portfolioIllu__promoButton:hover {
-    animation-name: pop;
+    animation: pop .5s ease-in-out forwards;
+}
+.main__socials__link:hover {
+    animation: pop .5s ease-in-out forwards;
 }
 
+
+@keyframes menu {
+    0% {
+        transform: scale(0);
+    }
+    33% {
+        transform: scale(1.1);
+    }
+    66% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
 @keyframes pop {
     0% {
         transform: scale(1);
     }
-    60% {
+    33% {
         transform: scale(1.1);
     }
-    80% {
+    66% {
         transform: scale(0.9);
     }
     100% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
+
+
+.nav__button:checked ~ .nav__groupSvg svg path:first-child {
+    animation: topBar .5s ease-in-out forwards;
+}
+.nav__button:checked ~ .nav__groupSvg svg path:nth-child(2) {
+    animation: midBar .5s ease-in-out forwards;
+}
+.nav__button:checked ~ .nav__groupSvg svg path:last-child {
+    animation: botBar .5s ease-in-out forwards;
+}
+
+@keyframes topBar {
+    0% {
+        transform-origin: 17.5%;
+    }
+    50% {
+        transform: translateY(12px) rotate(0)
+    }
+    100% {
+        transform-origin: 17.5%;
+        transform: translate(0) rotate(45deg);
+    }
+}
+@keyframes midBar {
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes botBar {
+    0% {
+        transform-origin: 17.5%;
+    }
+    50% {
+        transform: translateY(-12px) rotate(0)
+    }
+    100% {
+        transform-origin: 17.5%;
+        transform: translate(0) rotate(-45deg);
+    }
+}
+
+
+
