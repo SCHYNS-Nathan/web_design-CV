@@ -18,23 +18,12 @@
 
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="main.js" defer></script>
+
+    <link rel="preload" as="font" href="font/Merriweather-Black.otf" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Merriweather-Light.otf" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Quando-Regular.ttf" type="font/otf" crossorigin="anonymous">
 </head>
 <body>
-<!-- ----------------- HTML ----------------- -->
-<!-- Illustration principale et secondaire (background form) au propre -->
-<!-- Utiliser des srcset pour les images "grande" -->
-
-<!-- ----------------- CSS ----------------- -->
-<!-- Gérer couleur pour les modes sombres ??? -->
-<!-- unité de mesure (px -> em / % -->
-<!-- code propre (mettre des max/min-width quand c'est possible,... ) -->
-
-<!-- ----------------- JS ----------------- -->
-<!-- Canvas -->
-<!-- Apparition fondue -->
-
-<!-- OTHERS -->
-<!-- README sur github (URL site de réf, vidéo interaction, analyse du CV comme le site de la HEPL, ... ) -->
     <header class="header">
         <h1 class="header__title hidden" itemscope itemtype="https://schema.org/Person" aria-level="1">
             <span itemprop="name">Nathan Schyns</span> - <span itemprop="jobTitle" >Designer Web & Illustrateur</span>
@@ -96,9 +85,7 @@
                 </ul>
             </div>
         </nav>
-        <svg class="banner">
-
-        </svg>
+        <img class="header__img" src="img/bird.png" alt="Bird">
         <canvas id="draw">
 
         </canvas>

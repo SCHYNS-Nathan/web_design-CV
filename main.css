@@ -44,7 +44,7 @@ body, button {
 .footer__title {
     font-size: 0;
 }
-h2, h3 {
+h3 {
     line-height: 120%;
 }
 p, textarea, input {
@@ -52,14 +52,12 @@ p, textarea, input {
     line-height: 150%;
 }
 br {
-    margin-bottom: 15px;
+    margin-bottom: 1em;
 }
 ::selection {
     background-color: #13AEA2;
     color: #ffffff;
 }
-
-
 header {
     background-color: #282F39;
 }
@@ -94,11 +92,11 @@ header {
 
 .nav__burger {
     position: fixed;
-    top: 8px;
-    right: 10px;
+    top: .5em;
+    right: .625em;
 }
 .nav__svg {
-    padding: 17px 14px;
+    padding: 1.0625em 0.875em;
     background-color: #282F39;
     border-radius: 50%;
     cursor: pointer;
@@ -115,8 +113,8 @@ header {
 }
 .nav__button:checked ~ .nav__groupSvg {
     position: fixed;
-    top: 8px;
-    right: 10px;
+    top: .5em;
+    right: .625em;
     z-index: 100;
 }
 .nav__button:checked ~ .nav__groupSvg .nav__svg {
@@ -135,10 +133,10 @@ header {
     color: #FFC500;
 }
 .nav__item {
-    font-size: 28px;
+    font-size: 1.75em;
 }
 .nav__item:nth-child(n+2) {
-    margin-top: 16px;
+    margin-top: 0.5714285714285714em;
 }
 
 
@@ -152,7 +150,7 @@ canvas, .banner__bird {
     background-color: #ffffff;
 }
 .intro__text {
-    margin: 10px 0 30px;
+    margin: 0.7142857142857143em 0 2.142857142857143em;
 }
 .intro__text a {
     color: #13AEA2;
@@ -171,6 +169,13 @@ section:last-child .intro__text {
     margin-bottom: 0;
 }
 
+.header__img {
+    display: block;
+    max-width: 85vw;
+    margin: auto;
+    max-height: 276px;
+}
+
 .portfolioIllu__image {
     width: 100%;
     height: 100%;
@@ -178,8 +183,8 @@ section:last-child .intro__text {
 }
 
 .portfolioIllu__promoText {
-    font-size: 16px;
-    margin: 30px 25px 15px;
+    font-size: 1em;
+    margin: 1.875em 1.5625em 0.9375em;
     text-align: center;
 }
 .portfolioIllu__promoButton {
@@ -187,9 +192,9 @@ section:last-child .intro__text {
     justify-content: center;
     align-content: center;
     margin: auto;
-    padding: 12px 20px;
+    padding: .75em 1.25em;
     background-color: #282F39;
-    border-radius: 7px;
+    border-radius: .5em;
 }
 .portfolioIllu__promoLink {
     text-decoration: none;
@@ -200,26 +205,29 @@ section:last-child .intro__text {
     color: #fff;
 }
 .portfolioIllu__svg {
-    margin-left: 8px;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    margin-left: .5em;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: .75em;
     background-color: #DD5172;
 }
 .portfolioIllu__svg svg {
-    padding: 4px;
+    padding: .25em;
 }
 
-.portfolioWd__title {
-    order: 8;
-    position: absolute;
-    top: -10000px;
-    left: -10000px;
+.portfolioWd__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #13AEA2;
+}
+.portfolioWd__link:hover {
+    color: #DD5172;
 }
 .portfolioWd__clientName {
-    margin: 10px 0 30px;
+    margin: 0.625em 0 1.875em;
     font-weight: lighter;
     text-align: center;
+
 }
 .portfolioWd__group svg {
     width: 100%;
@@ -227,7 +235,7 @@ section:last-child .intro__text {
 }
 
 .main__socials {
-    margin: 50px auto 15px;
+    margin: 3.125em auto 0.9375em;
 }
 .main__socials__ul {
     display: flex;
@@ -237,42 +245,41 @@ section:last-child .intro__text {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 8px;
-    width: 64px;
-    height: 64px;
+    margin: .5em;
+    width: 4em;
+    height: 4em;
     background-color: #DD5172;
-    border-radius: 32px;
+    border-radius: 2em;
 }
 
 
 .footer__contact {
-    padding: 50px 25px;
+    padding: 3.125em 1.5625em;
     text-align: center;
     background-color: #496E77;
     color: #ffffff;
 }
 .footer__form {
-    margin-top: 30px;
+    margin-top: 1.875em;
 }
 .form__label {
     cursor: pointer;
 }
 .form__input {
-    font-size: 14px;
-    padding: 5px;
-    min-height: 28px;
+    font-size: .875em;
+    padding: .3571428571428571em;
+    min-height: 2em;
     max-height: 45vh;
-    border-radius: 5px;
+    border-radius: .33em;
     border-style: none;
 }
 .form__button {
-    padding: 10px;
+    padding: .625em;
     background-color: #13AEA2;
-    font-size: 16px;
     text-transform: uppercase;
     color: #ffffff;
     border-style: none;
-    border-radius: 5px;
+    border-radius: .5em;
     cursor: pointer;
 }
 .form__button:hover {
@@ -286,56 +293,55 @@ section:last-child .intro__text {
 
 /* ---------------  MEDIA QUERIES  --------------- */
 @media (max-width: 480px) {
-    h2, h3 {
-        font-size: 18px;
+    h3 {
+        font-size: 1.125em;
     }
-
 
     header {
         height: 340px;
     }
 
     .socials__item {
-        margin-top: 16px;
-        width: 48px;
-        height: 48px;
-        border-radius: 24px;
+        margin-top: 1em;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
     }
     .socials__item:first-child {
-        margin-left: 25px;
+        margin-left: 1.5625em;
     }
     .socials__item:nth-child(n+2) {
-        margin-left: 8px;
+        margin-left: .5em;
     }
 
     .nav__burger {
-        top: 8px;
-        right: 10px;
+        top: .5em;
+        right: .625em;
     }
     .nav__svg {
-        padding: 17px 14px;
+        padding: 1em .875em;
     }
 
     .nav__ul {
         position: absolute;
         right: -150px;
         width: 100%;
-        height: 340px;
+        height: 21.25em;
     }
 
     .nav__item {
         text-align: center;
     }
     .nav__item:first-child {
-        margin-top: 80px;
+        margin-top: 2.857142857142857em;
     }
 
 
     .main__intro {
-        padding: 25px;
+        padding: 1.5625em;
     }
     .intro__text {
-        font-size: 14px;
+        font-size: 0.875em;
     }
 
     .portfolioIllu__ul {
@@ -345,7 +351,7 @@ section:last-child .intro__text {
     }
 
     .portfolioIllu__promoText {
-        font-size: 14px;
+        font-size: 0.875em;
     }
     .portfolioIllu__promoButton {
         width: 65vw;
@@ -355,11 +361,11 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
-        column-gap: 25px;
-        margin: 50px 20px 0;
+        column-gap: 1.5625em;
+        margin: 3.125em 1.25em 0;
     }
     .portfolioWd__clientName {
-        font-size: 16px;
+        font-size: 1em;
     }
 
 
@@ -370,7 +376,7 @@ section:last-child .intro__text {
     .form__input {
         width: 90%;
         max-width: 90%;
-        margin: 5px auto 20px;
+        margin: .3571428571428571em auto 1.428571428571429em;
     }
     .form__button {
         width: 65vw;
@@ -379,77 +385,76 @@ section:last-child .intro__text {
     .slider__ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 2px;
-        margin-top: 2px;
+        grid-gap: .125em;
+        margin-top: .125em;
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-    h2, h3 {
-        font-size: 20px;
+    h3 {
+        font-size: 1.25em;
     }
-
 
     header {
         height: 440px;
     }
 
     .socials__item {
-        margin-top: 16px;
-        width: 48px;
-        height: 48px;
-        border-radius: 24px;
+        margin-top: 1em;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
     }
     .socials__item:first-child {
-        margin-left: 25px;
+        margin-left: 1.5625em;
     }
     .socials__item:nth-child(n+2) {
-        margin-left: 12px;
+        margin-left: .75em;
     }
 
     .nav__burger {
-        top: 8px;
-        right: 10px;
+        top: .5em;
+        right: .625em;
     }
     .nav__svg {
-        padding: 17px 14px;
+        padding: 1em .875em;
     }
     .nav__ul {
         position: absolute;
         right: -450px;
-        width: 400px;
-        height: 400px;
-        border-radius: 0 0 0 400px;
+        width: 25em;
+        height: 25em;
+        border-radius: 0 0 0 100%;
     }
     .nav__item {
         text-align: right;
-        margin-right: 80px;
+        margin-right: 2.857142857142857em;
     }
     .nav__item:first-child {
-        margin-top: 80px;
+        margin-top: 2.857142857142857em;
     }
 
 
     .main__intro {
-        margin: -100px 25px 0;
-        padding: 25px;
-        border-radius: 7px;
+        margin: -6.25em 1.5625em 0;
+        padding: 1.5625em;
+        border-radius: .5em;
     }
     .intro__text {
-        font-size: 14px;
+        font-size: .875em;
     }
 
     .portfolioIllu__ul {
-        grid-gap: 5px;
+        grid-gap: .3125em;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 20vw 20vw;
         display: grid;
-        margin: 10px 25px 0;
+        margin: .625em 1.5625em 0;
     }
     .portfolioIllu__image {
-        border-radius: 7px;
+        border-radius: .5em;
     }
     .portfolioIllu__promoText {
-        font-size: 14px;
+        font-size: .875em;
     }
     .portfolioIllu__promoButton {
         width: 50vw;
@@ -459,12 +464,12 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
-        column-gap: 25px;
-        margin: 50px auto 0;
+        column-gap: 1.5625em;
+        margin: 3.125em auto 0;
         width: 75vw;
     }
     .portfolioWd__clientName {
-        font-size: 16px;
+        font-size: 1em;
     }
 
 
@@ -474,14 +479,14 @@ section:last-child .intro__text {
     }
     .form__label {
         text-align: left;
-        padding: 17px 10px 0 0;
+        padding: 1em .625em 0 0;
     }
     .form__input {
-        margin: 5px 0;
-        padding: 5px 0 5px 5px;
+        margin: 0.357142857142857em 0;
+        padding: 0.357142857142857em 0 0.357142857142857em 0.357142857142857em;
         min-width: 50%;
         max-width: 66.6vw;
-        min-height: 32px;
+        min-height: 2.285714285714286em;
     }
     .form__button {
         width: 55vw;
@@ -490,44 +495,42 @@ section:last-child .intro__text {
     .slider__ul {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-gap: 2px;
-        margin-top: 2px;
+        grid-gap: .125em;
+        margin-top: .125em;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-    h2, h3 {
-        font-size: 20px;
+    h3 {
+        font-size: 1.25em;
     }
-
-
     header {
         height: 648px;
     }
 
     .socials__item {
-        margin-top: 24px;
-        width: 52px;
-        height: 52px;
-        border-radius: 26px;
+        margin-top: 1.5em;
+        width: 3.25em;
+        height: 3.25em;
+        border-radius: 50%;
     }
     .socials__item:first-child {
-        margin-left: 50px;
+        margin-left: 3.125em;
     }
     .socials__item:nth-child(n+2) {
-        margin-left: 12px;
+        margin-left: .75em;
     }
 
     .nav__burger {
-        top: 18px;
-        right: 15px;
+        top: 1.125em;
+        right: .9375em;
     }
     .nav__svg {
-        padding: 17px 14px;
+        padding: 1em .875em;
     }
     .nav__button:checked ~ .nav__groupSvg {
         position: fixed;
-        top: 18px;
-        right: 15px;
+        top: 1.125em;
+        right: 0.9375em;
     }
     .nav__ul {
         position: absolute;
@@ -549,26 +552,26 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5%;
-        margin: -308px 35px 0;
-        padding: 25px;
-        border-radius: 7px;
+        margin: -19.25em 2.1875em 0;
+        padding: 1.5625em;
+        border-radius: .5em;
     }
     .intro__text {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .portfolioIllu__ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 20vw 20vw;
-        grid-gap: 5px;
-        margin: 10px 35px 0;
+        grid-gap: .41015625em;
+        margin: .62890625em 2.1875em 0;
     }
     .portfolioIllu__image {
-        border-radius: 7px;
+        border-radius: .5em;
     }
     .portfolioIllu__promoText {
-        margin: 30px auto 20px;
+        margin: 1.875em auto 1.25em;
         width: 80%;
     }
     .portfolioIllu__promoButton {
@@ -579,16 +582,16 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(3, auto);
-        column-gap: 30px;
-        margin: 50px 35px 0;
+        column-gap: 1.875em;
+        margin: 3.125em 2.1875em 0;
     }
     .portfolioWd__clientName {
-        font-size: 16px;
+        font-size: 1em;
     }
 
 
     .footer__contact {
-        margin: 0 35px;
+        margin: 0 2.1875em;
     }
 
     .form__group {
@@ -597,14 +600,14 @@ section:last-child .intro__text {
     }
     .form__label {
         text-align: left;
-        padding: 17px 10px 0 0;
+        padding: 1em .625em 0 0;
     }
     .form__input {
-        margin: 5px 0;
-        padding: 5px 0 5px 5px;
+        margin: .3125em 0;
+        padding: .3125em 0 .3125em .3125em;
         min-width: 50%;
         max-width: 66.6vw;
-        min-height: 32px;
+        min-height: 2em;
     }
     .form__button {
         width: 45vw;
@@ -614,61 +617,61 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-gap: 2px;
-        margin: 2px 35px 0;
+        margin: .125em 2.1875em 0;
     }
 }
 @media (min-width: 1025px) {
-    h2, h3 {
-        font-size: 22px;
+    h3 {
+        font-size: 1.375em;
     }
 
 
     header {
-        height: 848px;
+        height: 53em;
     }
 
     .socials__item {
-        width: 64px;
-        height: 64px;
-        border-radius: 32px;
-        margin-top: 24px;
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        margin-top: 1.5em;
     }
     .socials__item:first-child {
-        margin-left: 35px;
+        margin-left: 2.1875em;
     }
     .socials__item:nth-child(n+2) {
-        margin-left: 12px;
+        margin-left: .75em;
     }
     .socials__item svg {
-        width: 40px;
-        height: 40px;
+        width: 2.5em;
+        height: 2.5em;
     }
 
     .nav__burger {
-        top: 24px;
-        right: 15px;
+        top: 1.5em;
+        right: .9375em;
     }
     .nav__svg {
-        padding: 17px 14px;
+        padding: 1em .875em;
     }
     .nav__button:checked ~ .nav__groupSvg {
         position: fixed;
-        top: 24px;
-        right: 15px;
+        top: 1.5em;
+        right: .9375em;
     }
     .nav__ul {
         position: absolute;
         right: -600px;
-        width: 512px;
-        height: 512px;
+        width: 32em;
+        height: 32em;
         border-radius: 0 0 0 100%;
     }
     .nav__item {
         text-align: right;
-        margin-right: 100px;
+        margin-right: 3.571428571428571em;
     }
     .nav__item:first-child {
-        margin-top: 100px;
+        margin-top: 3.571428571428571em;
     }
 
 
@@ -676,12 +679,12 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 25%;
-        padding: 100px 45px 25px;
-        margin: -408px 35px 0;
-        border-radius: 7px;
+        padding: 6.25em 2.8125em 1.5625em;
+        margin: -25.5em 2.1875em 0;
+        border-radius: .5em;
     }
     .intro__text {
-        font-size: 16px;
+        font-size: 1em;
     }
     .main__paragraph:last-child {
         text-align: right;
@@ -691,35 +694,35 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 20vw 20vw;
-        grid-gap: 5px;
-        margin: 10px 35px 0;
+        grid-gap: .3125em;
+        margin: .625em 2.1875em 0;
     }
     .portfolioIllu__image {
-        border-radius: 7px;
+        border-radius: .5em;
     }
     .portfolioIllu__promoButton {
         width: 35vw;
     }
     .portfolioIllu__promoText {
-        font-size: 24px;
+        font-size: 1.5em;
         width: 80%;
-        margin: 30px auto 20px;
+        margin: 1.25em auto 1em;
     }
 
     .main__portfolioWd {
-        margin: 50px 35px 0;
+        margin: 3.125em 2.1875em 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(2, auto);
-        grid-gap: 15px;
+        grid-gap: 1em;
     }
     .portfolioWd__clientName {
-        font-size: 16px;
+        font-size: 1.25em;
     }
 
 
     .footer__contact {
-        margin: 0 35px;
+        margin: 0 2.1875em;
     }
 
     .form__group {
@@ -728,14 +731,14 @@ section:last-child .intro__text {
     }
     .form__label {
         text-align: left;
-        padding: 17px 10px 0 0;
+        padding: 1em .625em 0 0;
     }
     .form__input {
-        margin: 5px 0;
-        padding: 5px 0 5px 5px;
+        margin: .3125em 0;
+        padding: .3125em 0 .3125em .3125em;
         min-width: 50%;
         max-width: 70vw;
-        min-height: 32px;
+        min-height: 2em;
     }
     .form__button {
         width: 45vw;
@@ -744,8 +747,8 @@ section:last-child .intro__text {
     .slider__ul {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-gap: 2px;
-        margin: 2px 35px 0;
+        grid-gap: .125em;
+        margin: .125em 2.1875em 0;
     }
 }
 
@@ -766,60 +769,57 @@ section:last-child .intro__text {
         text-align: center;
     }
     .portfolioIllu__svg {
-        margin: 5px auto 0;
+        margin: .3125em auto 0;
     }
 
     .main__portfolioWd {
         display: block;
         width: 70%;
-        margin: 50px auto 0;
+        margin: 3.125em auto 0;
     }
     .portfolioWd__clientName {
-        font-size: 20px;
+        font-size: 1.5em;
     }
 }
 @media (min-width: 1200px) {
     main {
-        width: 1200px;
+        width: 75em;
         margin: auto ;
     }
     .main__intro {
-        margin: -408px 0 0;
+        margin: -25.5em 0 0;
     }
     .intro__title {
-        font-size: 26px;
+        font-size: 1.625em;
     }
     .intro__text {
-        font-size: 20px;
+        font-size: 1.5em;
     }
 
     .portfolioIllu__ul {
-        margin: 10px 0 0;
-        grid-template-rows: 210px 210px;
+        margin: .625em 0 0;
+        grid-template-rows: 15em 15em;
     }
     .portfolioIllu__promoButton {
-        width: 500px;
+        width: 31.25em;
     }
     .main__portfolioWd {
-        margin: 50px 0 0;
+        margin: 3.125em 0 0;
     }
     .footer__contact {
-        width: 1200px;
-        margin: 30px auto 0;
+        width: 75em;
+        margin: 1.875em auto 0;
     }
     .footer__text {
-        font-size: 26px;
+        font-size: 1.625em;
     }
     .form__button {
-        max-width: 600px;
+        max-width: 37.5em;
     }
     .slider__ul {
-        width: 1250px;
-        margin: 2px auto 0;
+        width: 78.125em;
+        margin: .125em auto 0;
     }
-}
-@media (prefers-color-scheme: dark) {
-
 }
 
 /* ---------------  FOCUS STYLE  --------------- */
@@ -829,7 +829,6 @@ a:focus {
 }
 a:focus img {
     outline: 2px solid #DD5172;
-    z-index: 10;
 }
 a:focus .portfolioIllu__promoButton {
     outline: 2px solid #DD5172;
@@ -880,7 +879,7 @@ a:focus .portfolioIllu__promoButton {
 .socials__item ,#email, .portfolioIllu__image, .intro__text abbr, .form__button {
     transition: all .3s ease-in-out;
 }
-.portfolioWd__svg, .slider__img {
+.portfolioWd__svg, .portfolioWd__link, .slider__img {
     transition: all .15s ease-in-out;
 }
 
@@ -896,21 +895,178 @@ a:focus .portfolioIllu__promoButton {
 
 
 .nav__button:checked ~ .nav__ul {
-    animation: menu .5s ease-in-out forwards;
     -webkit-animation: menu .5s ease-in-out forwards;
     -moz-animation: menu .5s ease-in-out forwards;
+    animation: menu .5s ease-in-out forwards;
 }
 .portfolioIllu__promoButton:hover {
-    animation: pop .5s ease forwards;
     -webkit-animation: pop .5s ease-in-out forwards;
     -moz-animation: pop .5s ease-in-out forwards;
+    animation: pop .5s ease forwards;
 }
 .main__socials__link:hover {
-    animation: pop .5s ease-in-out forwards;
     -webkit-animation: pop .5s ease-in-out forwards;
     -moz-animation: pop .5s ease-in-out forwards;
+    animation: pop .5s ease-in-out forwards;
 }
 
+.nav__button:checked ~ .nav__groupSvg svg path:first-child {
+    -webkit-animation: topBar .5s ease-in-out forwards;
+    -moz-animation: topBar .5s ease-in-out forwards;
+    animation: topBar .5s ease-in-out forwards;
+}
+.nav__button:checked ~ .nav__groupSvg svg path:nth-child(2) {
+    -webkit-animation: midBar .5s ease-in-out forwards;
+    -moz-animation: midBar .5s ease-in-out forwards;
+    animation: midBar .5s ease-in-out forwards;
+}
+.nav__button:checked ~ .nav__groupSvg svg path:last-child {
+    -webkit-animation: botBar .5s ease-in-out forwards;
+    -moz-animation: botBar .5s ease-in-out forwards;
+    animation: botBar .5s ease-in-out forwards;
+}
+
+@-moz-keyframes menu {
+    0% {
+        -moz-transform-origin: top right;
+        -moz-transform: scale(0);
+    }
+    25% {
+        -moz-transform: scale(1.2);
+    }
+    35% {
+        -moz-transform: scale(1);
+    }
+    50% {
+        -moz-transform: scale(1.1);
+    }
+    75%{
+        -moz-transform: scale(1);
+    }
+    90% {
+        -moz-transform: scale(1.05);
+    }
+}
+@-moz-keyframes pop {
+    0% {
+        -moz-transform: scale(1);
+    }
+    33% {
+        -moz-transform: scale(1.1);
+    }
+    66% {
+        -moz-transform: scale(0.9);
+    }
+    100% {
+        -moz-transform: scale(1.1);
+    }
+}
+@-moz-keyframes topBar {
+    0% {
+        -moz-transform-origin: 17.5%;
+    }
+    50% {
+        -moz-transform: translateY(12px) rotate(0)
+    }
+    100% {
+        -moz-transform-origin: 17.5%;
+        -moz-transform: translate(0) rotate(45deg);
+    }
+}
+@-moz-keyframes midBar {
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-moz-keyframes botBar {
+    0% {
+        -moz-transform-origin: 17.5%;
+    }
+    50% {
+        -moz-transform: translateY(-12px) rotate(0);
+    }
+    100% {
+        -moz-transform-origin: 17.5%;
+        -moz-transform: translate(0) rotate(-45deg);
+    }
+}
+
+@-webkit-keyframes menu {
+    0% {
+        -webkit-transform-origin: top right;
+        -webkit-transform: scale(0);
+    }
+    25% {
+        -webkit-transform: scale(1.2);
+    }
+    35% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+    }
+    75%{
+        -webkit-transform: scale(1);
+    }
+    90% {
+        -webkit-transform: scale(1.05);
+    }
+}
+@-webkit-keyframes pop {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    33% {
+        -webkit-transform: scale(1.1);
+    }
+    66% {
+        -webkit-transform: scale(0.9);
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+    }
+}
+@-webkit-keyframes topBar {
+    0% {
+        -webkit-transform-origin: 17.5%;
+    }
+    50% {
+        -webkit-transform: translateY(12px) rotate(0)
+    }
+    100% {
+        -webkit-transform-origin: 17.5%;
+        -webkit-transform: translate(0) rotate(45deg);
+    }
+}
+@-webkit-keyframes midBar {
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes botBar {
+    0% {
+        -webkit-transform-origin: 17.5%;
+    }
+    50% {
+        -webkit-transform: translateY(-12px) rotate(0);
+    }
+    100% {
+        -webkit-transform-origin: 17.5%;
+        -webkit-transform: translate(0) rotate(-45deg);
+    }
+}
 
 @keyframes menu {
     0% {
@@ -947,18 +1103,6 @@ a:focus .portfolioIllu__promoButton {
         transform: scale(1.1);
     }
 }
-
-
-.nav__button:checked ~ .nav__groupSvg svg path:first-child {
-    animation: topBar .5s ease-in-out forwards;
-}
-.nav__button:checked ~ .nav__groupSvg svg path:nth-child(2) {
-    animation: midBar .5s ease-in-out forwards;
-}
-.nav__button:checked ~ .nav__groupSvg svg path:last-child {
-    animation: botBar .5s ease-in-out forwards;
-}
-
 @keyframes topBar {
     0% {
         transform-origin: 17.5%;
