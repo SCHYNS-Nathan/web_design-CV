@@ -1,4 +1,4 @@
-/* --------------- RESET CSS (MEYER) --------------- */
+/* --------------- RESET CSS (R. MEYER) --------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,6 +58,8 @@ br {
     background-color: #13AEA2;
     color: #ffffff;
 }
+
+
 header {
     background-color: #282F39;
 }
@@ -65,15 +67,6 @@ header {
 .socials__item {
     display: inline-block;
     background-color: #496E77;
-}
-.socials__item:first-of-type:hover {
-    background-color: #FFC500;
-}
-.socials__item:nth-child(2):hover {
-    background-color: #DD5172;
-}
-.socials__item:last-child:hover {
-    background-color: #13AEA2;
 }
 .socials__item svg, .main__socials__item svg {
     align-self: center;
@@ -96,14 +89,11 @@ header {
     right: .625em;
 }
 .nav__svg {
-    padding: 1.0625em 0.875em;
+    padding: 1.0625em .875em;
     background-color: #282F39;
     border-radius: 50%;
     cursor: pointer;
     overflow: visible;
-}
-.nav__svg:hover {
-    background-color: #496E77;
 }
 .nav__button:checked ~ .nav__ul {
     display: block;
@@ -120,7 +110,6 @@ header {
 .nav__button:checked ~ .nav__groupSvg .nav__svg {
     background-color: transparent;
 }
-
 .nav__ul {
     display: none;
     background-color: #496E77;
@@ -129,44 +118,11 @@ header {
     color: #ffffff;
     text-decoration: none;
 }
-.nav__link:hover {
-    color: #FFC500;
-}
 .nav__item {
     font-size: 1.75em;
 }
 .nav__item:nth-child(n+2) {
-    margin-top: 0.5714285714285714em;
-}
-
-
-/* TODO */
-canvas, .banner__bird {
-    display: none;
-}
-
-
-.main__intro {
-    background-color: #ffffff;
-}
-.intro__text {
-    margin: 0.7142857142857143em 0 2.142857142857143em;
-}
-.intro__text a {
-    color: #13AEA2;
-}
-.intro__text a:hover {
-    color: #DD5172;
-}
-.intro__text abbr {
-    text-decoration: #13AEA2 wavy underline;
-    cursor: help;
-}
-.intro__text abbr:hover {
-    text-decoration: #DD5172 wavy underline;
-}
-section:last-child .intro__text {
-    margin-bottom: 0;
+    margin-top: .5714285714285714em;
 }
 
 .header__img {
@@ -175,16 +131,37 @@ section:last-child .intro__text {
     margin: auto;
     max-height: 276px;
 }
+/* TODO */
+#draw {
+    visibility: hidden;
+}
+
+
+.main__intro {
+    background-color: #ffffff;
+}
+
+.intro__text {
+    margin: .7142857142857143em 0 2.142857142857143em;
+}
+.intro__text a {
+    color: #13AEA2;
+}
+.intro__text abbr {
+    text-decoration: #13AEA2 wavy underline;
+    cursor: help;
+}
+section:last-child .intro__text {
+    margin-bottom: 0;
+}
 
 .portfolioIllu__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .portfolioIllu__promoText {
-    font-size: 1em;
-    margin: 1.875em 1.5625em 0.9375em;
+    margin: 1.875em 1.5625em .9375em;
     text-align: center;
 }
 .portfolioIllu__promoButton {
@@ -220,11 +197,8 @@ section:last-child .intro__text {
     text-transform: uppercase;
     color: #13AEA2;
 }
-.portfolioWd__link:hover {
-    color: #DD5172;
-}
 .portfolioWd__clientName {
-    margin: 0.625em 0 1.875em;
+    margin: .625em 0 1.875em;
     font-weight: lighter;
     text-align: center;
 
@@ -235,7 +209,7 @@ section:last-child .intro__text {
 }
 
 .main__socials {
-    margin: 3.125em auto 0.9375em;
+    margin: 3.125em auto .9375em;
 }
 .main__socials__ul {
     display: flex;
@@ -274,6 +248,7 @@ section:last-child .intro__text {
     border-style: none;
 }
 .form__button {
+    font-size: 1em;
     padding: .625em;
     background-color: #13AEA2;
     text-transform: uppercase;
@@ -282,10 +257,10 @@ section:last-child .intro__text {
     border-radius: .5em;
     cursor: pointer;
 }
-.form__button:hover {
-    background-color: #DD5172;
-}
 
+.slider__link {
+    font-size: 0;
+}
 .slider__img {
     max-width: 100%;
 }
@@ -296,6 +271,7 @@ section:last-child .intro__text {
     h3 {
         font-size: 1.125em;
     }
+
 
     header {
         height: 340px;
@@ -314,21 +290,15 @@ section:last-child .intro__text {
         margin-left: .5em;
     }
 
-    .nav__burger {
-        top: .5em;
-        right: .625em;
-    }
     .nav__svg {
         padding: 1em .875em;
     }
-
     .nav__ul {
         position: absolute;
         right: -150px;
         width: 100%;
         height: 21.25em;
     }
-
     .nav__item {
         text-align: center;
     }
@@ -341,7 +311,7 @@ section:last-child .intro__text {
         padding: 1.5625em;
     }
     .intro__text {
-        font-size: 0.875em;
+        font-size: .875em;
     }
 
     .portfolioIllu__ul {
@@ -349,9 +319,8 @@ section:last-child .intro__text {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 22.5vw 22.5vw;
     }
-
     .portfolioIllu__promoText {
-        font-size: 0.875em;
+        font-size: .875em;
     }
     .portfolioIllu__promoButton {
         width: 65vw;
@@ -393,6 +362,7 @@ section:last-child .intro__text {
     h3 {
         font-size: 1.25em;
     }
+
 
     header {
         height: 440px;
@@ -482,8 +452,8 @@ section:last-child .intro__text {
         padding: 1em .625em 0 0;
     }
     .form__input {
-        margin: 0.357142857142857em 0;
-        padding: 0.357142857142857em 0 0.357142857142857em 0.357142857142857em;
+        margin: .357142857142857em 0;
+        padding: .357142857142857em 0 .357142857142857em .357142857142857em;
         min-width: 50%;
         max-width: 66.6vw;
         min-height: 2.285714285714286em;
@@ -503,6 +473,8 @@ section:last-child .intro__text {
     h3 {
         font-size: 1.25em;
     }
+
+
     header {
         height: 648px;
     }
@@ -530,7 +502,7 @@ section:last-child .intro__text {
     .nav__button:checked ~ .nav__groupSvg {
         position: fixed;
         top: 1.125em;
-        right: 0.9375em;
+        right: .9375em;
     }
     .nav__ul {
         position: absolute;
@@ -593,7 +565,6 @@ section:last-child .intro__text {
     .footer__contact {
         margin: 0 2.1875em;
     }
-
     .form__group {
         display: grid;
         grid-template-columns: 1fr 3fr;
@@ -752,8 +723,6 @@ section:last-child .intro__text {
     }
 }
 
-
-/* ---------------  MEDIA QUERIES EXTREME  --------------- */
 @media (max-width: 360px) {
     .portfolioIllu__ul {
         display: grid;
@@ -781,7 +750,7 @@ section:last-child .intro__text {
         font-size: 1.5em;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
     main {
         width: 75em;
         margin: auto ;
@@ -803,11 +772,13 @@ section:last-child .intro__text {
     .portfolioIllu__promoButton {
         width: 31.25em;
     }
+
     .main__portfolioWd {
         margin: 3.125em 0 0;
     }
+
     .footer__contact {
-        width: 75em;
+        width: 1200px;
         margin: 1.875em auto 0;
     }
     .footer__text {
@@ -816,11 +787,16 @@ section:last-child .intro__text {
     .form__button {
         max-width: 37.5em;
     }
+    #f_message {
+        max-width: 956px;
+        max-height: 300px;
+    }
     .slider__ul {
         width: 78.125em;
         margin: .125em auto 0;
     }
 }
+
 
 /* ---------------  FOCUS STYLE  --------------- */
 a:focus {
@@ -849,10 +825,14 @@ a:focus .portfolioIllu__promoButton {
     border-radius: 32px;
     outline: none;
 }
+
 .nav__button:focus + div .nav__svg {
     background-color: #496E77;
     fill: #282F39;
     outline: none;
+}
+.nav__button:focus:checked + div .nav__svg path {
+    stroke: #FFC500;
 }
 .nav__link:focus {
     color: #FFC500;
@@ -864,7 +844,6 @@ a:focus .portfolioIllu__promoButton {
     outline: none;
 }
 
-
 .form__input:focus {
     outline: 2px solid #DD5172;
 }
@@ -872,9 +851,43 @@ a:focus .portfolioIllu__promoButton {
     background-color: #DD5172;
     outline: none;
 }
+.slider__link:focus .slider__img {
+    opacity: .3;
+}
 
 
 /* ---------------  CSS ANIMATION  --------------- */
+.socials__item:first-of-type:hover {
+    background-color: #FFC500;
+}
+.socials__item:nth-child(2):hover {
+    background-color: #DD5172;
+}
+.socials__item:last-child:hover {
+    background-color: #13AEA2;
+}
+
+.nav__svg:hover {
+    background-color: #496E77;
+}
+.nav__svg:hover {
+    background-color: #496E77;
+}
+
+.intro__text a:hover {
+    color: #DD5172;
+}
+.intro__text abbr:hover {
+    text-decoration: #DD5172 wavy underline;
+}
+
+.portfolioWd__link:hover {
+    color: #DD5172;
+}
+.form__button:hover {
+    background-color: #DD5172;
+}
+
 
 .socials__item ,#email, .portfolioIllu__image, .intro__text abbr, .form__button {
     transition: all .3s ease-in-out;
@@ -884,32 +897,24 @@ a:focus .portfolioIllu__promoButton {
 }
 
 .portfolioIllu__image:hover {
-    transform: scale(0.9);
+    transform: scale(.9);
 }
 .portfolioWd__svg:hover {
     transform: rotate(10deg) scale(1.05);
 }
 .slider__img:hover {
-    opacity: .5;
+    opacity: .3;
 }
-
+.slider__link div {
+    background-image: url("img/to_instagram.svg");
+    background-size: cover;
+}
 
 .nav__button:checked ~ .nav__ul {
     -webkit-animation: menu .5s ease-in-out forwards;
     -moz-animation: menu .5s ease-in-out forwards;
     animation: menu .5s ease-in-out forwards;
 }
-.portfolioIllu__promoButton:hover {
-    -webkit-animation: pop .5s ease-in-out forwards;
-    -moz-animation: pop .5s ease-in-out forwards;
-    animation: pop .5s ease forwards;
-}
-.main__socials__link:hover {
-    -webkit-animation: pop .5s ease-in-out forwards;
-    -moz-animation: pop .5s ease-in-out forwards;
-    animation: pop .5s ease-in-out forwards;
-}
-
 .nav__button:checked ~ .nav__groupSvg svg path:first-child {
     -webkit-animation: topBar .5s ease-in-out forwards;
     -moz-animation: topBar .5s ease-in-out forwards;
@@ -925,6 +930,18 @@ a:focus .portfolioIllu__promoButton {
     -moz-animation: botBar .5s ease-in-out forwards;
     animation: botBar .5s ease-in-out forwards;
 }
+
+.portfolioIllu__promoButton:hover {
+    -webkit-animation: pop .5s ease-in-out forwards;
+    -moz-animation: pop .5s ease-in-out forwards;
+    animation: pop .5s ease forwards;
+}
+.main__socials__link:hover {
+    -webkit-animation: pop .5s ease-in-out forwards;
+    -moz-animation: pop .5s ease-in-out forwards;
+    animation: pop .5s ease-in-out forwards;
+}
+
 
 @-moz-keyframes menu {
     0% {
@@ -955,7 +972,7 @@ a:focus .portfolioIllu__promoButton {
         -moz-transform: scale(1.1);
     }
     66% {
-        -moz-transform: scale(0.9);
+        -moz-transform: scale(.9);
     }
     100% {
         -moz-transform: scale(1.1);
@@ -1026,7 +1043,7 @@ a:focus .portfolioIllu__promoButton {
         -webkit-transform: scale(1.1);
     }
     66% {
-        -webkit-transform: scale(0.9);
+        -webkit-transform: scale(.9);
     }
     100% {
         -webkit-transform: scale(1.1);
@@ -1097,7 +1114,7 @@ a:focus .portfolioIllu__promoButton {
         transform: scale(1.1);
     }
     66% {
-        transform: scale(0.9);
+        transform: scale(.9);
     }
     100% {
         transform: scale(1.1);
@@ -1138,5 +1155,3 @@ a:focus .portfolioIllu__promoButton {
         transform: translate(0) rotate(-45deg);
     }
 }
-
-
