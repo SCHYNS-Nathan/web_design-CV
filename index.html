@@ -4,11 +4,10 @@
     <meta name="author" content="Nathan Schyns">
     <meta name="description" content="Hey ! Je suis Nathan Schyns, un créatif belge à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore ! (Recréation du site de Denise Chandler dans le cadre du cours de design web donné à la Haute École de la Province de Liège.)">
 
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Nathan Schyns">
-
-
-    <meta property="og:image" content="">
-
+    <meta property="og:image" content="./og_img.jpg">
+    <meta property="og:url" content="https://nathan-schyns.be/">
 
     <meta property="og:description" content="Hey ! Je suis Nathan Schyns, un créatif belge à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore ! (Recréation du site de Denise Chandler dans le cadre du cours de design web donné à la Haute École de la Province de Liège.)">
 
@@ -97,10 +96,16 @@
             <picture>
                 <source media="(max-width: 1024px)" srcset="img/bird_small.png">
                 <source media="(min-width: 1025px)" srcset="img/bird.png">
-                <img class="header__img" src="img/bird_small.png" alt="Bird">
+                <img class="header__img" src="img/bird_small.png" alt="Birdy, l'oiseau rose">
             </picture>
         </div>
-        <canvas id="draw">
+        <div class="header__leye hidden">
+            <img class="header__leyebrow" src="img/l_eyebrow.png" alt="Sourcil gauche de Birdy">
+        </div>
+        <div class="header__reye hidden">
+            <img class="header__reyebrow" src="img/r_eyebrow.png" alt="Sourcil droit de Birdy">
+        </div>
+        <canvas id="draw" width="100" height="100">
 
         </canvas>
     </header>
@@ -128,32 +133,32 @@
             <ul class="portfolioIllu__ul">
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image" src="img/visit_card.jpg" alt="Carte_de_visite" itemprop="image">
+                        <img class="portfolioIllu__image" src="img/visit_card.jpg" alt="Carte de visite avec des formes abstraites réalisées à l'aquarelle. Elle est au nom de Nathan Schyns" itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image" src="img/guts_fanart.jpg" alt="Guts_de_Berserk" itemprop="image">
+                        <img class="portfolioIllu__image" src="img/guts_fanart.jpg" alt="Fanart de Guts du manga Berserk de Kentaro Miura" itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image" src="img/d'un_autre_oeil_cover.jpg" alt="D'un_autre_oeil" itemprop="image">
+                        <img class="portfolioIllu__image" src="img/d'un_autre_oeil_cover.jpg" alt="Couverture du livre D'un autre oeil. On y voit une formation de rochers réalisés à l'aquarelle." itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image" src="img/alunissage_1969.jpg" alt="Alunissage_1969" itemprop="image">
+                        <img class="portfolioIllu__image" src="img/alunissage_1969.jpg" alt="Affiche pour l'alunissage de 1969. On y voit la date posée sur la lune." itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image" src="img/profile_pic.jpg" alt="Krooked_glasses_fanart" itemprop="image">
+                        <img class="portfolioIllu__image" src="img/profile_pic.jpg" alt="Fanart représentant un jeune homme." itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image" src="img/into_the_smashverse_logo.jpg" alt="Into_the_smashverse" itemprop="image">
+                        <img class="portfolioIllu__image" src="img/into_the_smashverse_logo.jpg" alt="Logo de l'événement Into the Smashverse. On y voit une croix taggé dans un cercle." itemprop="image">
                     </a>
                 </li>
             </ul>
