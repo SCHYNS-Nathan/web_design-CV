@@ -6,7 +6,7 @@
 
     <meta property="og:title" content="Nathan Schyns">
 
-/* MISSING IMAGE HERE */
+
     <meta property="og:image" content="">
 
 
@@ -93,7 +93,13 @@
                 </ul>
             </div>
         </nav>
-        <img class="header__img" src="img/bird.png" alt="Bird">
+        <div class="header__picture">
+            <picture>
+                <source media="(max-width: 1024px)" srcset="img/bird_small.png">
+                <source media="(min-width: 1025px)" srcset="img/bird.png">
+                <img class="header__img" src="img/bird_small.png" alt="Bird">
+            </picture>
+        </div>
         <canvas id="draw">
 
         </canvas>

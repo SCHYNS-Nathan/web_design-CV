@@ -98,6 +98,7 @@ header {
 .nav__button:checked ~ .nav__ul {
     display: block;
     position: fixed;
+    z-index: 2;
     top: 0;
     right: 0;
 }
@@ -105,7 +106,7 @@ header {
     position: fixed;
     top: .5em;
     right: .625em;
-    z-index: 100;
+    z-index: 10;
 }
 .nav__button:checked ~ .nav__groupSvg .nav__svg {
     background-color: transparent;
@@ -125,12 +126,22 @@ header {
     margin-top: .5714285714285714em;
 }
 
+.header__picture {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 .header__img {
     display: block;
-    max-width: 85vw;
     margin: auto;
-    max-height: 276px;
+    position: relative;
+    left: 50%;
+    transform: translate(-47.5%, 0);
+    pointer-events: none;
 }
+
 /* TODO */
 #draw {
     visibility: hidden;
@@ -276,6 +287,10 @@ section:last-child .intro__text {
     header {
         height: 340px;
     }
+    .header__img {
+        max-height: 246px;
+        margin-top: 30px;
+    }
 
     .socials__item {
         margin-top: 1em;
@@ -366,6 +381,10 @@ section:last-child .intro__text {
 
     header {
         height: 440px;
+    }
+    .header__img {
+        max-height: 246px;
+        margin-top: 30px;
     }
 
     .socials__item {
@@ -478,6 +497,11 @@ section:last-child .intro__text {
     header {
         height: 648px;
     }
+    .header__img {
+        max-height: 264px;
+        margin-top: 50px;
+
+    }
 
     .socials__item {
         margin-top: 1.5em;
@@ -524,7 +548,7 @@ section:last-child .intro__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5%;
-        margin: -19.25em 2.1875em 0;
+        margin: -258px 2.1875em 0;
         padding: 1.5625em;
         border-radius: .5em;
     }
@@ -599,6 +623,10 @@ section:last-child .intro__text {
 
     header {
         height: 53em;
+    }
+    .header__img {
+        max-height: 790px;
+        margin-top: 50px;
     }
 
     .socials__item {
@@ -872,6 +900,9 @@ a:focus .portfolioIllu__promoButton {
 }
 .nav__svg:hover {
     background-color: #496E77;
+}
+.nav__link:hover {
+    color: #FFC500;
 }
 
 .intro__text a:hover {
