@@ -184,7 +184,7 @@ header {
     color: #13AEA2;
 }
 .intro__text abbr {
-    text-decoration: #13AEA2 wavy underline;
+    text-decoration: #13AEA2 underline;
     cursor: help;
 }
 section:last-child .intro__text {
