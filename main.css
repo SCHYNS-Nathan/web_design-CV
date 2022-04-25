@@ -87,6 +87,7 @@ header {
     position: fixed;
     top: .5em;
     right: .625em;
+    z-index: 1;
 }
 .nav__svg {
     padding: 1.0625em .875em;
@@ -98,7 +99,6 @@ header {
 .nav__button:checked ~ .nav__ul {
     display: block;
     position: fixed;
-    z-index: 2;
     top: 0;
     right: 0;
 }
@@ -106,7 +106,7 @@ header {
     position: fixed;
     top: .5em;
     right: .625em;
-    z-index: 10;
+    z-index: 2;
 }
 .nav__button:checked ~ .nav__groupSvg .nav__svg {
     background-color: transparent;
@@ -135,10 +135,35 @@ header {
 }
 .header__img {
     display: block;
-    position: relative;
-    left: 50%;
-    transform: translate(-47.5%, 0);
     pointer-events: none;
+}
+.header__leyebrow {
+    width: 45px;
+    pointer-events: none;
+}
+.header__reyebrow {
+    width: 50px;
+    pointer-events: none;
+}
+.header__leye {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -140px;
+}
+.header__leye div {
+    margin-left: -145px;
+}
+.header__reye {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+}
+.header__reye div {
+    margin-left: 35px;
 }
 
 /* TODO */
@@ -500,7 +525,26 @@ section:last-child .intro__text {
     .header__img {
         max-height: 264px;
         margin-top: 50px;
-
+    }
+    .header__leye {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -150px;
+    }
+    .header__leye div {
+        margin-left: -152px;
+    }
+    .header__reye {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -40px;
+    }
+    .header__reye div {
+        margin-left: 40px;
     }
 
     .socials__item {
@@ -627,6 +671,24 @@ section:last-child .intro__text {
     .header__img {
         max-height: 790px;
         margin-top: 50px;
+    }
+    .header__leyebrow {
+        width: 50px;
+    }
+    .header__reyebrow {
+        width: 55px;
+    }
+    .header__leye {
+        margin-top: -655px;
+    }
+    .header__leye div {
+        margin-left: -175px;
+    }
+    .header__reye {
+        margin-top: -45px;
+    }
+    .header__reye div {
+        margin-left: 45px;
     }
 
     .socials__item {
@@ -962,6 +1024,16 @@ a:focus .portfolioIllu__promoButton {
     animation: botBar .5s ease-in-out forwards;
 }
 
+.header__leye {
+    animation: leftEye 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+.header__reye {
+    animation: rightEye 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
 .portfolioIllu__promoButton:hover {
     -webkit-animation: pop .5s ease-in-out forwards;
     -moz-animation: pop .5s ease-in-out forwards;
@@ -1184,5 +1256,25 @@ a:focus .portfolioIllu__promoButton {
     100% {
         transform-origin: 17.5%;
         transform: translate(0) rotate(-45deg);
+    }
+}
+@keyframes leftEye {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+    }
+}
+@keyframes rightEye {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
     }
 }
