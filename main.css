@@ -981,6 +981,16 @@ a:focus .portfolioIllu__promoButton {
     background-color: #DD5172;
 }
 
+.fade {
+    transition: ease-in-out .75s;
+    opacity: 0;
+    transform: translateY(2em);
+}
+.fade.inview {
+    opacity: 1;
+    transform: none;
+    transition-delay: .25s;
+}
 
 .socials__item ,#email, .portfolioIllu__image, .intro__text abbr, .form__button {
     transition: all .3s ease-in-out;
