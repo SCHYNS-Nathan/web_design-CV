@@ -391,11 +391,17 @@ section:last-child .intro__text {
         width: 65vw;
     }
 
-    .slider__ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: .125em;
+    .slider__wrapper {
         margin-top: .125em;
+    }
+    .slider__ul {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .slider__item {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -506,11 +512,18 @@ section:last-child .intro__text {
         width: 55vw;
     }
 
-    .slider__ul {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: .125em;
+
+    .slider__wrapper {
         margin-top: .125em;
+    }
+    .slider__ul {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .slider__item {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -652,11 +665,17 @@ section:last-child .intro__text {
         width: 45vw;
     }
 
-    .slider__ul {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-gap: 2px;
+    .slider__wrapper {
         margin: .125em 2.1875em 0;
+    }
+    .slider__ul {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .slider__item {
+        display: inline-block;
+        width: 125px;
+        height: 125px;
     }
 }
 @media (min-width: 1025px) {
@@ -947,6 +966,17 @@ a:focus .portfolioIllu__promoButton {
 
 
 /* ---------------  CSS ANIMATION  --------------- */
+.fade {
+    transition: ease-in-out .75s;
+    opacity: 0;
+    transform: translateY(2em);
+}
+.fade.inview {
+    opacity: 1;
+    transform: none;
+    transition-delay: .25s;
+}
+
 .socials__item:first-of-type:hover {
     background-color: #FFC500;
 }
@@ -981,16 +1011,6 @@ a:focus .portfolioIllu__promoButton {
     background-color: #DD5172;
 }
 
-.fade {
-    transition: ease-in-out .75s;
-    opacity: 0;
-    transform: translateY(2em);
-}
-.fade.inview {
-    opacity: 1;
-    transform: none;
-    transition-delay: .25s;
-}
 
 .socials__item ,#email, .portfolioIllu__image, .intro__text abbr, .form__button {
     transition: all .3s ease-in-out;
@@ -1005,6 +1025,7 @@ a:focus .portfolioIllu__promoButton {
 .portfolioWd__svg:hover {
     transform: rotate(10deg) scale(1.05);
 }
+
 .slider__img:hover {
     opacity: .3;
 }

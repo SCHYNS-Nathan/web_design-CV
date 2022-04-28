@@ -18,4 +18,29 @@ for(let i=0; i < items.length; i++){
     obs.observe(items[i]);
 }
 
+// Slider
+
+const slider = document.querySelector('.slider__ul');
+const sliderImg = document.querySelector('.slider__img');
+let sliderImgWidth = sliderImg.clientWidth;
+
+let sliderTimer = setInterval(()=> {
+    scrollSlider();
+}, 2500);
+
+window.addEventListener('load', () => {
+    sliderImgWidth = sliderImg.clientWidth;
+})
+window.addEventListener('resize', () => {
+    sliderImgWidth = sliderImg.clientWidth;
+})
+function scrollSlider() {
+    if (slider.scrollLeft >= slider.scrollLeftMax) {
+        slider.scrollTo(0, 0);
+    } else {
+        slider.scrollBy(sliderImgWidth+5 , 0);
+    }
+}
+
+
 
