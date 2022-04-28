@@ -18,15 +18,28 @@ for(let i=0; i < items.length; i++){
     obs.observe(items[i]);
 }
 
-// Slider
 
+// Canvas
+
+const introWidth = document.querySelector('.main__intro').clientWidth;
+
+const canvas = document.getElementById('draw');
+const ctx = canvas.getContext('2d');
+
+canvas.width = introWidth;
+
+
+
+
+
+// Slider
 
 const slider = document.querySelector('.slider__ul');
 const sliderImg = document.querySelector('.slider__img');
 let sliderImgWidth = sliderImg.clientWidth;
-let isset = true;
 
-const sliderTimer = setInterval(()=> {
+
+setInterval(()=> {
     scrollSlider();
 }, 2500);
 
@@ -35,6 +48,7 @@ window.addEventListener('load', () => {
 })
 window.addEventListener('resize', () => {
     sliderImgWidth = sliderImg.clientWidth;
+
 })
 function scrollSlider() {
     if (slider.scrollLeft >= slider.scrollLeftMax) {
@@ -49,6 +63,7 @@ function scrollSlider() {
         });
     }
 }
+
 
 
 
