@@ -20,11 +20,13 @@ for(let i=0; i < items.length; i++){
 
 // Slider
 
+
 const slider = document.querySelector('.slider__ul');
 const sliderImg = document.querySelector('.slider__img');
 let sliderImgWidth = sliderImg.clientWidth;
+let isset = true;
 
-let sliderTimer = setInterval(()=> {
+const sliderTimer = setInterval(()=> {
     scrollSlider();
 }, 2500);
 
@@ -36,9 +38,15 @@ window.addEventListener('resize', () => {
 })
 function scrollSlider() {
     if (slider.scrollLeft >= slider.scrollLeftMax) {
-        slider.scrollTo(0, 0);
+        slider.scrollTo({
+            left: 0,
+            behavior: "smooth"
+        });
     } else {
-        slider.scrollBy(sliderImgWidth+5 , 0);
+        slider.scrollBy({
+            left: sliderImgWidth+5,
+            behavior: "smooth"
+        });
     }
 }
 
