@@ -28,6 +28,7 @@ const canvas = document.getElementById('draw');
 const ctx = canvas.getContext('2d');
 
 let intro = document.querySelector('.main__intro');
+let feathersArray = [];
 
 resizeCanvas();
 window.addEventListener('resize', () => {
@@ -38,6 +39,8 @@ function resizeCanvas() {
     canvas.height = 150;
 }
 
+
+
 const FallingFeathers = {
     init() {
        this.maxFeathers();
@@ -46,22 +49,25 @@ const FallingFeathers = {
     },
 
     maxFeathers() {
-      this.maxFeather = Math.floor(canvas.width / 10);
+      this.maxFeather = Math.floor(canvas.width / 100);
     },
 
     animate() {
         this.feathers = [];
 
         if (this.feathers.length < this.maxFeather) {
+
             this.feathers.push(new Feathers(this.canvas, this.ctx));
+            console.log(this.feathers)
+
         } else if (this.feathers.length > this.maxFeather) {
             this.feathers = this.feathers.slice(0, this.maxFeather);
         }
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         this.feathers.forEach((feather) => {
-            feather.update();
+            // feather.update();
         })
-        requestAnimationFrame(this.animate.bind(this));
+        // requestAnimationFrame(this.animate.bind(this));
     },
 
     addEventListeners() {
@@ -88,11 +94,22 @@ class Feathers {
         this.sprite = new Image();
         this.sprite.src = './img/feathers.png';
         this.sprite.addEventListener('load', () => {
-
         })
     }
 
-    generate() {
+    update() {
+        if (this.origin.y <= 0) {
+            console.log(1)
+            this.origin.y += this.speed.y;
+            this.draw();
+
+        }
+        if (this.origin.y >= canvas.height) {
+            console.log(2)
+        }
+    }
+
+    draw() {
         this.context.drawImage(
             this.sprite,
             14,
@@ -127,26 +144,7 @@ class Feathers {
             45
         );
     }
-
-    draw() {
-
-    }
-
-    update() {
-        if (this.origin.y <= 0) {
-            console.log(1)
-            this.generate();
-        }
-        if (this.origin.y >= canvas.height) {
-            console.log(2)
-        }
-        this.origin.y += this.speed.y
-
-    }
-
 }
-FallingFeathers.init();
-new Feathers();
 
 
 
@@ -154,8 +152,8 @@ function random(min, max) {
     return min + Math.random() * (max - min);
 }
 
-
-
+FallingFeathers.init();
+new Feathers();
 
 
 // Slider
