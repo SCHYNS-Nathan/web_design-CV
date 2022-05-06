@@ -3,11 +3,10 @@ import {random2, settings} from "./settings";
 export class Feathers {
     private canvas: HTMLCanvasElement;
     private ctx: CanvasRenderingContext2D;
-    private opacity: number;
-    private speedX: { min: number; max: number };
     private speedY: { min: number; max: number };
     private positionX: number;
     private positionY: number;
+    private angle: number;
     private sprite: HTMLImageElement;
     private chooseFeatherType: number;
     private maxFeathers: number;
@@ -22,13 +21,12 @@ export class Feathers {
     }
 
     init() {
-        this.ctx.globalAlpha = settings.feathers.opacity;
+        this.chooseFeatherType = Math.random();
         this.positionX = Math.random()*(this.canvas.width-45);
         this.positionY = random2(settings.feathers.positionY);
-        this.chooseFeatherType = Math.random();
+        this.angle = random2(settings.feathers.angle);
         this.calculateMaxFeathers();
 
-        this.speedX = settings.feathers.speedX;
         this.speedY = settings.feathers.speedY;
     }
 
@@ -37,6 +35,9 @@ export class Feathers {
     }
 
     draw() {
+        this.ctx.save();
+        this.ctx.translate(this.positionX + (settings.feathers.frame1.dw/2), this.positionY + (settings.feathers.frame1.dh/2));
+        this.ctx.rotate(this.angle * Math.PI / 180);
         if(this.chooseFeatherType <= 0.33) {
             this.ctx.drawImage(
                 this.sprite,
@@ -44,8 +45,8 @@ export class Feathers {
                 settings.feathers.frame1.sy,
                 settings.feathers.frame1.sw,
                 settings.feathers.frame1.sh,
-                this.positionX,
-                this.positionY,
+                -settings.feathers.frame1.dw/2,
+                -settings.feathers.frame1.dh/2,
                 settings.feathers.frame1.dw,
                 settings.feathers.frame1.dh
             );
@@ -56,8 +57,8 @@ export class Feathers {
                 settings.feathers.frame2.sy,
                 settings.feathers.frame2.sw,
                 settings.feathers.frame2.sh,
-                this.positionX,
-                this.positionY,
+                -settings.feathers.frame2.dw/2,
+                -settings.feathers.frame2.dh/2,
                 settings.feathers.frame2.dw,
                 settings.feathers.frame2.dh
             );
@@ -68,8 +69,8 @@ export class Feathers {
                 settings.feathers.frame3.sy,
                 settings.feathers.frame3.sw,
                 settings.feathers.frame3.sh,
-                this.positionX,
-                this.positionY,
+                -settings.feathers.frame3.dw/2,
+                -settings.feathers.frame3.dh/2,
                 settings.feathers.frame3.dw,
                 settings.feathers.frame3.dh
             );
@@ -86,6 +87,7 @@ export class Feathers {
                 settings.feathers.frame1.dh
             );
         }
+        this.ctx.restore();
     }
 
     resize() {
@@ -97,6 +99,8 @@ export class Feathers {
             this.init();
         }
         this.positionY += 1;
+        this.angle += 1;
+
         this.draw();
     }
 }
