@@ -38,6 +38,8 @@ export class Canvas {
     resizeCanvas() {
         let windowWidth = window.innerWidth;
         let intro = document.querySelector('.main__intro');
+        this.maxFeathers = Math.floor(this.canvas.width/100);
+
         this.canvas.width = intro.clientWidth;
         if (windowWidth >= 769 && windowWidth < 1025) {
             this.canvas.height = 394;
@@ -60,12 +62,6 @@ export class Canvas {
     addEventListeners() {
         window.addEventListener('resize', () => {
             this.resizeCanvas();
-            for (let i=0; i<5 ; i++) {
-                this.feathers.push(new Feathers(this.canvas, this.ctx));
-            }
-            this.feathers.forEach((feather: Feathers) => {
-                feather.draw();
-            })
         })
     }
 }

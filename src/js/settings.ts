@@ -32,7 +32,7 @@ export const settings = {
             dh: 45
         },
 
-        positionY: {min: -150, max:-50},
+        positionY: {min: -400, max:-50},
         opacity: 1,
         speedX: {min: 1, max:3},
         speedY: {min: .5, max:2}
