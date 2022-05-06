@@ -1,10 +1,10 @@
 // Fade-in
 
-const items = document.querySelectorAll('.fade-in');
+let items;
+items = document.querySelectorAll('.fade-in');
 for (const item of items) {
     item.classList.add('fade');
 }
-
 const cb = function(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -12,44 +12,71 @@ const cb = function(entries){
         }
     });
 }
-
 const obs = new IntersectionObserver(cb);
-for(let i=0; i < items.length; i++){
+for(let i=0 ; i<items.length ; i++){
     obs.observe(items[i]);
 }
 
 
 
+// Slider
 
+const slider = document.querySelector('.slider__ul');
+const sliderImg = document.querySelector('.slider__img');
+let sliderImgWidth = sliderImg.clientWidth;
 
-// Canvas
+setInterval(()=> {
+    scrollSlider();
+}, 2500);
 
-const canvas = document.getElementById('draw');
-const ctx = canvas.getContext('2d');
-
-let intro = document.querySelector('.main__intro');
-let feathersArray = [];
-
-resizeCanvas();
-window.addEventListener('resize', () => {
-    resizeCanvas();
+window.addEventListener('load', () => {
+    sliderImgWidth = sliderImg.clientWidth;
 })
-function resizeCanvas() {
-    canvas.width = intro.clientWidth;
-    canvas.height = 150;
+window.addEventListener('resize', () => {
+    sliderImgWidth = sliderImg.clientWidth;
+})
+function scrollSlider() {
+    if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+        slider.scrollTo({
+            left: 0,
+            behavior: "smooth"
+        });
+    } else {
+        slider.scrollBy({
+            left: sliderImgWidth+5,
+            behavior: "smooth"
+        });
+    }
 }
 
 
 
+// Canvas
+import {Canvas} from "./Canvas";
+import {Animation} from "./Animation";
+
+class Main {
+    private canvas: Canvas;
+    private animation: Animation;
+
+    constructor() {
+        this.canvas = new Canvas();
+        this.animation = new Animation();
+    }
+}
+new Main();
+
+/*
+
 const FallingFeathers = {
     init() {
-       this.maxFeathers();
-       this.animate();
-       this.addEventListeners();
+        this.maxFeathers();
+        this.animate();
+        this.addEventListeners();
     },
 
     maxFeathers() {
-      this.maxFeather = Math.floor(canvas.width / 100);
+        this.maxFeather = Math.floor(canvas.width / 100);
     },
 
     animate() {
@@ -78,7 +105,6 @@ const FallingFeathers = {
         return this;
     }
 }
-
 class Feathers {
     constructor() {
         this.canvasElement = canvas;
@@ -92,7 +118,7 @@ class Feathers {
         this.opacity = 1;
 
         this.sprite = new Image();
-        this.sprite.src = './img/feathers.png';
+        this.sprite.src = ;
         this.sprite.addEventListener('load', () => {
         })
     }
@@ -112,36 +138,15 @@ class Feathers {
     draw() {
         this.context.drawImage(
             this.sprite,
-            14,
-            54,
-            104,
-            125,
-            random(0, canvas.width - 40),
-            this.origin.y,
-            40,
-            45
+
         );
         this.context.drawImage(
             this.sprite,
-            161,
-            7,
-            131,
-            179,
-            random(0, canvas.width - 40),
-            this.origin.y,
-            40,
-            45
+
         );
         this.context.drawImage(
             this.sprite,
-            314,
-            65,
-            72,
-            127,
-            random(0, canvas.width - 40),
-            this.origin.y,
-            40,
-            45
+
         );
     }
 }
@@ -155,36 +160,9 @@ function random(min, max) {
 FallingFeathers.init();
 new Feathers();
 
+ */
 
-// Slider
 
-const slider = document.querySelector('.slider__ul');
-const sliderImg = document.querySelector('.slider__img');
-let sliderImgWidth = sliderImg.clientWidth;
-
-setInterval(()=> {
-    scrollSlider();
-}, 2500);
-
-window.addEventListener('load', () => {
-    sliderImgWidth = sliderImg.clientWidth;
-})
-window.addEventListener('resize', () => {
-    sliderImgWidth = sliderImg.clientWidth;
-})
-function scrollSlider() {
-    if (slider.scrollLeft >= slider.scrollLeftMax) {
-        slider.scrollTo({
-            left: 0,
-            behavior: "smooth"
-        });
-    } else {
-        slider.scrollBy({
-            left: sliderImgWidth+5,
-            behavior: "smooth"
-        });
-    }
-}
 
 
 

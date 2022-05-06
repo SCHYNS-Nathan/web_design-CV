@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
     list-style: none;
@@ -294,6 +295,20 @@ section:last-child .intro__text {
     cursor: pointer;
 }
 
+.slider__ul {
+    scrollbar-width: thin;
+    scrollbar-color: #282f39 #ececec;
+}
+.slider__ul::-webkit-scrollbar {
+    height: 7px;
+}
+.slider__ul::-webkit-scrollbar-track {
+    background: #ececec;
+}
+.slider__ul::-webkit-scrollbar-thumb {
+    background-color: #282f39;
+}
+
 .slider__link {
     font-size: 0;
 }
@@ -395,7 +410,8 @@ section:last-child .intro__text {
         margin-top: .125em;
     }
     .slider__ul {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
     }
     .slider__item {
@@ -517,7 +533,8 @@ section:last-child .intro__text {
         margin-top: .125em;
     }
     .slider__ul {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
     }
     .slider__item {
@@ -669,7 +686,8 @@ section:last-child .intro__text {
         margin: .125em 2.1875em 0;
     }
     .slider__ul {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
     }
     .slider__item {
@@ -1030,7 +1048,7 @@ a:focus .portfolioIllu__promoButton {
     opacity: .3;
 }
 .slider__link div {
-    background-image: url("img/to_instagram.svg");
+    background-image: url("../img/to_instagram.svg");
     background-size: cover;
 }
 
@@ -1147,6 +1165,26 @@ a:focus .portfolioIllu__promoButton {
         -moz-transform: translate(0) rotate(-45deg);
     }
 }
+@-moz-keyframes leftEye {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+    }
+}
+@-moz-keyframes rightEye {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+    }
+}
 
 @-webkit-keyframes menu {
     0% {
@@ -1216,6 +1254,26 @@ a:focus .portfolioIllu__promoButton {
     100% {
         -webkit-transform-origin: 17.5%;
         -webkit-transform: translate(0) rotate(-45deg);
+    }
+}
+@-webkit-keyframes leftEye {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+    }
+}
+@-webkit-keyframes rightEye {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
     }
 }
 

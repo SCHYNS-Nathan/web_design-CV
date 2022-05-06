@@ -8,7 +8,6 @@
     <meta property="og:title" content="Nathan Schyns">
     <meta property="og:image" content="./og_img.jpg">
     <meta property="og:url" content="https://nathan-schyns.be/">
-
     <meta property="og:description" content="Hey ! Je suis Nathan Schyns, un créatif belge à votre service pour tout vos projets concernant le web, l’illustration et bien plus encore ! (Recréation du site de Denise Chandler dans le cadre du cours de design web donné à la Haute École de la Province de Liège.)">
 
     <meta charset="UTF-8">
@@ -23,12 +22,14 @@
 
     <title>Nathan Schyns - Designer Web & Illustrateur</title>
 
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script src="dist/js/main.js" defer></script>
 
-    <link rel="preload" as="font" href="font/Merriweather-Black.otf" type="font/otf" crossorigin="anonymous">
-    <link rel="preload" as="font" href="font/Merriweather-Light.otf" type="font/otf" crossorigin="anonymous">
-    <link rel="preload" as="font" href="font/Quando-Regular.ttf" type="font/otf" crossorigin="anonymous">
+    <!-- Régler chargement police !!!
+        <link rel="preload" as="font" href="src/font/Merriweather-Black.otf" type="font/otf" crossorigin="anonymous">
+        <link rel="preload" as="font" href="src/font/Merriweather-Light.otf" type="font/otf" crossorigin="anonymous">
+        <link rel="preload" as="font" href="src/font/Quando-Regular.ttf" type="font/otf" crossorigin="anonymous">
+    -->
 </head>
 <body>
     <header class="header">
@@ -94,19 +95,19 @@
         </nav>
         <div class="header__picture">
             <picture>
-                <source media="(max-width: 1024px)" srcset="img/bird_small.png">
-                <source media="(min-width: 1025px)" srcset="img/bird.png">
-                <img class="header__img" src="img/bird_small.png" alt="Birdy, l'oiseau rose">
+                <source media="(max-width: 1024px)" srcset="src/img/bird_small.png">
+                <source media="(min-width: 1025px)" srcset="src/img/bird.png">
+                <img class="header__img" src="src/img/bird_small.png" alt="Birdy, l'oiseau rose">
             </picture>
         </div>
         <div class="header__leye">
             <div>
-                <img class="header__leyebrow" src="img/l_eyebrow.png" alt="Sourcil gauche de Birdy">
+                <img class="header__leyebrow" src="src/img/l_eyebrow.png" alt="Sourcil gauche de Birdy">
             </div>
         </div>
         <div class="header__reye">
             <div>
-                <img class="header__reyebrow" src="img/r_eyebrow.png" alt="Sourcil droit de Birdy">
+                <img class="header__reyebrow" src="src/img/r_eyebrow.png" alt="Sourcil droit de Birdy">
             </div>
         </div>
         <canvas id="draw" width="100" height="100">
@@ -137,32 +138,32 @@
             <ul class="portfolioIllu__ul">
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image fade-in" src="img/visit_card.jpg" alt="Carte de visite avec des formes abstraites réalisées à l'aquarelle. Elle est au nom de Nathan Schyns" itemprop="image">
+                        <img class="portfolioIllu__image fade-in" src="src/img/visit_card.jpg" alt="Carte de visite avec des formes abstraites réalisées à l'aquarelle. Elle est au nom de Nathan Schyns" itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image fade-in" src="img/guts_fanart.jpg" alt="Fanart de Guts du manga Berserk de Kentaro Miura" itemprop="image">
+                        <img class="portfolioIllu__image fade-in" src="src/img/guts_fanart.jpg" alt="Fanart de Guts du manga Berserk de Kentaro Miura" itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image fade-in" src="img/d'un_autre_oeil_cover.jpg" alt="Couverture du livre D'un autre oeil. On y voit une formation de rochers réalisés à l'aquarelle." itemprop="image">
+                        <img class="portfolioIllu__image fade-in" src="src/img/d'un_autre_oeil_cover.jpg" alt="Couverture du livre D'un autre oeil. On y voit une formation de rochers réalisés à l'aquarelle." itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image fade-in" src="img/alunissage_1969.jpg" alt="Affiche pour l'alunissage de 1969. On y voit la date posée sur la lune." itemprop="image">
+                        <img class="portfolioIllu__image fade-in" src="src/img/alunissage_1969.jpg" alt="Affiche pour l'alunissage de 1969. On y voit la date posée sur la lune." itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image fade-in" src="img/profile_pic.jpg" alt="Fanart représentant un jeune homme." itemprop="image">
+                        <img class="portfolioIllu__image fade-in" src="src/img/profile_pic.jpg" alt="Fanart représentant un jeune homme." itemprop="image">
                     </a>
                 </li>
                 <li class="portfolioIllu__item">
                     <a class="portfolioIllu__link" href="index.html" title="Se rendre sur la page dessin">
-                        <img class="portfolioIllu__image fade-in" src="img/into_the_smashverse_logo.jpg" alt="Logo de l'événement Into the Smashverse. On y voit une croix taggé dans un cercle." itemprop="image">
+                        <img class="portfolioIllu__image fade-in" src="src/img/into_the_smashverse_logo.jpg" alt="Logo de l'événement Into the Smashverse. On y voit une croix taggé dans un cercle." itemprop="image">
                     </a>
                 </li>
             </ul>
@@ -562,70 +563,70 @@
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/ike_fanart.jpg" alt="ike_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/ike_fanart.jpg" alt="ike_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/samus_fanart.jpg" alt="samus_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/samus_fanart.jpg" alt="samus_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/fox_fanart.jpg" alt="fox_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/fox_fanart.jpg" alt="fox_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/zelda_fanart.jpg" alt="zelda_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/zelda_fanart.jpg" alt="zelda_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/yoshi_fanart.jpg" alt="yoshi_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/yoshi_fanart.jpg" alt="yoshi_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/snake_fanart.jpg" alt="snake_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/snake_fanart.jpg" alt="snake_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/ganondorf_fanart.jpg" alt="ganondorf_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/ganondorf_fanart.jpg" alt="ganondorf_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/ness_fanart.jpg" alt="ness_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/ness_fanart.jpg" alt="ness_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/pikachu_fanart.jpg" alt="pikachu_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/pikachu_fanart.jpg" alt="pikachu_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
                     <li class="slider__item">
                         <a class="slider__link" href="https://www.instagram.com/natnatsch/" title="Se rendre sur ma page Instagram">
                             <div>
-                                <img class="slider__img" src="img/mario_fanart.jpg" alt="mario_fanart" itemprop="image">
+                                <img class="slider__img" src="src/img/mario_fanart.jpg" alt="mario_fanart" itemprop="image">
                             </div>
                         </a>
                     </li>
