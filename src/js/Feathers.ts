@@ -1,4 +1,4 @@
-import {settings} from "./settings";
+import {random2, settings} from "./settings";
 
 export class Feathers {
     private canvas: HTMLCanvasElement;
@@ -18,14 +18,13 @@ export class Feathers {
 
         this.sprite = new Image();
         this.sprite.src = settings.sprite;
-
         this.init();
     }
 
     init() {
-        this.opacity = settings.feathers.opacity;
-        this.positionX = Math.random()*this.canvas.width;
-        this.positionY = 0;
+        this.ctx.globalAlpha = settings.feathers.opacity;
+        this.positionX = Math.random()*(this.canvas.width-45);
+        this.positionY = random2(settings.feathers.positionY);
         this.chooseFeatherType = Math.random();
         this.calculateMaxFeathers();
 

@@ -32,9 +32,17 @@ export const settings = {
             dh: 45
         },
 
-        position: {min: 0, max:100},
+        positionY: {min: -150, max:-50},
         opacity: 1,
         speedX: {min: 1, max:3},
         speedY: {min: .5, max:2}
     }
+}
+
+export function random(min: number, max: number) {
+    return random2({min: min, max: max});
+}
+
+export function random2(param: {min: number, max: number}) {
+    return param.min + Math.random()*(param.max-param.min) | 0;
 }

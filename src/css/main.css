@@ -133,6 +133,7 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    // margin-top: -130px;
 }
 .header__img {
     display: block;
@@ -170,7 +171,7 @@ header {
 
 #draw {
     display: block;
-    margin: auto;
+    margin: -80px auto -276px;
 }
 
 
@@ -617,6 +618,10 @@ section:last-child .intro__text {
         margin-top: 10vw;
     }
 
+    #draw {
+        margin: -80px auto -314px;
+    }
+
 
     .main__intro {
         display: grid;
@@ -770,6 +775,10 @@ section:last-child .intro__text {
     }
     .nav__item:first-child {
         margin-top: 3.571428571428571em;
+    }
+
+    #draw {
+        margin: -88px auto -356px;
     }
 
 
