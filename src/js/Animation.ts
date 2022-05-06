@@ -12,7 +12,8 @@ export class Animation {
     }
 
     start() {
-        this.canvas.animate();
+        console.log(6)
+        this.canvas.animate([]);
         requestAnimationFrame(() => this.start());
     }
 }

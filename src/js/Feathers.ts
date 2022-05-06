@@ -38,7 +38,6 @@ export class Feathers {
     }
 
     draw() {
-        console.log(3)
         if(this.chooseFeatherType <= 0.33) {
             this.ctx.drawImage(
                 this.sprite,
@@ -95,8 +94,10 @@ export class Feathers {
     }
 
     animate() {
+        if (this.positionY > this.canvas.height + 45) {
+            this.init();
+        }
         this.positionY += 1;
-
-
+        this.draw();
     }
 }

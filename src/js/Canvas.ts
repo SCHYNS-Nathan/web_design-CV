@@ -1,6 +1,6 @@
 import {Feathers} from "./Feathers";
-import {settings} from "./settings";
 import {Animation} from "./Animation";
+import {settings} from "./settings";
 
 export class Canvas {
     private canvas: HTMLCanvasElement;
@@ -26,6 +26,7 @@ export class Canvas {
             this.feathers.forEach((feather: Feathers) => {
                 feather.draw();
             })
+            this.animate();
         })
 
 
@@ -38,9 +39,12 @@ export class Canvas {
     }
 
     animate() {
+        this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
+
         this.feathers.forEach((feather: Feathers) => {
             feather.animate();
         })
+
     }
 
     addEventListeners() {
