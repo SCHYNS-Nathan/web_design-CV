@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
     list-style: none;
@@ -294,6 +295,19 @@ section:last-child .intro__text {
     cursor: pointer;
 }
 
+.slider__ul {
+    scrollbar-width: thin;
+    scrollbar-color: #282f39 #ececec;
+}
+.slider__ul::-webkit-scrollbar {
+    height: 7px;
+}
+.slider__ul::-webkit-scrollbar-track {
+    background: #ececec;
+}
+.slider__ul::-webkit-scrollbar-thumb {
+    background-color: #282f39;
+}
 .slider__link {
     font-size: 0;
 }
@@ -395,7 +409,8 @@ section:last-child .intro__text {
         margin-top: .125em;
     }
     .slider__ul {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
     }
     .slider__item {
@@ -517,7 +532,8 @@ section:last-child .intro__text {
         margin-top: .125em;
     }
     .slider__ul {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
     }
     .slider__item {
@@ -669,7 +685,8 @@ section:last-child .intro__text {
         margin: .125em 2.1875em 0;
     }
     .slider__ul {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
     }
     .slider__item {
@@ -1030,7 +1047,7 @@ a:focus .portfolioIllu__promoButton {
     opacity: .3;
 }
 .slider__link div {
-    background-image: url("img/to_instagram.svg");
+    background-image: url("../img/to_instagram.svg");
     background-size: cover;
 }
 

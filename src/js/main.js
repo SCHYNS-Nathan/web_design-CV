@@ -24,10 +24,10 @@ for(let i=0; i < items.length; i++){
 
 // Canvas
 
-const canvas = document.getElementById('draw');
-const ctx = canvas.getContext('2d');
+/*
 
-let intro = document.querySelector('.main__intro');
+
+
 let feathersArray = [];
 
 resizeCanvas();
@@ -35,8 +35,7 @@ window.addEventListener('resize', () => {
     resizeCanvas();
 })
 function resizeCanvas() {
-    canvas.width = intro.clientWidth;
-    canvas.height = 150;
+
 }
 
 
@@ -78,7 +77,6 @@ const FallingFeathers = {
         return this;
     }
 }
-
 class Feathers {
     constructor() {
         this.canvasElement = canvas;
@@ -155,6 +153,8 @@ function random(min, max) {
 FallingFeathers.init();
 new Feathers();
 
+ */
+
 
 // Slider
 
@@ -173,7 +173,8 @@ window.addEventListener('resize', () => {
     sliderImgWidth = sliderImg.clientWidth;
 })
 function scrollSlider() {
-    if (slider.scrollLeft >= slider.scrollLeftMax) {
+    if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+
         slider.scrollTo({
             left: 0,
             behavior: "smooth"
