@@ -1,6 +1,6 @@
 export const settings = {
+    sprite: './src/img/feathers.png',
     feathers: {
-        sprite: './img/feathers.png',
         frame1: {
             sx: 14,
             sy: 54,
@@ -32,6 +32,7 @@ export const settings = {
             dh: 45
         },
 
+        position: {min: 0, max:100},
         opacity: 1,
         speedX: {min: 1, max:3},
         speedY: {min: .5, max:2}
