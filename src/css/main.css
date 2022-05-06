@@ -172,6 +172,7 @@ header {
 #draw {
     display: block;
     margin: -80px auto -276px;
+    color: #ffffff;
 }
 
 
@@ -284,6 +285,9 @@ section:last-child .intro__text {
     max-height: 45vh;
     border-radius: .33em;
     border-style: none;
+}
+#f_message {
+    resize: vertical;
 }
 .form__button {
     font-size: 1em;
@@ -924,7 +928,6 @@ section:last-child .intro__text {
         max-width: 37.5em;
     }
     #f_message {
-        max-width: 956px;
         max-height: 300px;
     }
     .slider__ul {

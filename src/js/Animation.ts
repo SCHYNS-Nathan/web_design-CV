@@ -3,15 +3,15 @@ import {Feathers} from "./Feathers";
 import {settings} from "./settings";
 
 export class Animation {
-    private canvas: HTMLCanvasElement;
+    private canvas: Canvas;
 
-    constructor(canvas: HTMLCanvasElement) {
+    constructor(canvas: Canvas) {
         this.canvas = canvas;
         this.start();
     }
 
     start() {
-        this.canvas.animate([]);
+        this.canvas.animate();
         requestAnimationFrame(() => this.start());
     }
 }
