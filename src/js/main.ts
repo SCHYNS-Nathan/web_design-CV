@@ -1,32 +1,19 @@
 // Fade-in
-(function() {
-    const FadeIn = {
-        init() {
-            this.selector();
-            for (const item of this.items) {
-                item.classList.add('fade');
-            }
-            this.addClassToInview();
-        },
-        selector() {
-            this.items = document.querySelectorAll('.fade-in');
-        },
-        addClassToInview() {
-            const cb = function(entries){
-                entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        entry.target.classList.add('inview');
-                    }
-                });
-                this.obs = new IntersectionObserver(cb);
-                for(let i=0 ; i<this.items.length ; i++){
-                    this.obs.observe(this.items[i]);
-                }
-            }
+const items = document.querySelectorAll('.fade-in');
+for (const item of items) {
+    item.classList.add('fade');
+}
+const cb = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('inview');
         }
-    };
-    FadeIn.init();
-})();
+    });
+}
+const obs = new IntersectionObserver(cb);
+for(let i=0; i < items.length; i++){
+    obs.observe(items[i]);
+}
 
 // Slider
 (function() {

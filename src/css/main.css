@@ -1018,7 +1018,7 @@ a:focus .portfolioIllu__promoButton {
     opacity: 0;
     transform: translateY(2em);
 }
-.fade.inview {
+.inview {
     opacity: 1;
     transform: none;
     transition-delay: .25s;
