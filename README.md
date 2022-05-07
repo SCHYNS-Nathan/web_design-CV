@@ -15,8 +15,8 @@ Et voici la version actuelle de son site :
 https://denisechandler.com/ (Version actuelle)
 
 Je joins également une vidéo montrant les interactions de la version archivée du site :
+https://youtu.be/0gQlxMZRC4U
 
-<video src="E:\Video\Interacivité site CV.mkv"></video>
 
 
 
