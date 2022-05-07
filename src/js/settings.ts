@@ -32,7 +32,7 @@ export const settings = {
             dh: 45
         },
         positionY: {min: -400, max:-50},
-        speedY: {min: .5, max:2},
+        speedY: {min: 1, max:3},
         angle: {min: 0, max:360}
     }
 }

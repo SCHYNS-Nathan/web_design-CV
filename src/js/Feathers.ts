@@ -3,7 +3,7 @@ import {random2, settings} from "./settings";
 export class Feathers {
     private canvas: HTMLCanvasElement;
     private ctx: CanvasRenderingContext2D;
-    private speedY: { min: number; max: number };
+    private speedY: number;
     private positionX: number;
     private positionY: number;
     private angle: number;
@@ -27,7 +27,7 @@ export class Feathers {
         this.angle = random2(settings.feathers.angle);
         this.calculateMaxFeathers();
 
-        this.speedY = settings.feathers.speedY;
+        this.speedY = random2(settings.feathers.speedY);
     }
 
     calculateMaxFeathers() {
@@ -98,7 +98,7 @@ export class Feathers {
         if (this.positionY > this.canvas.height + 45) {
             this.init();
         }
-        this.positionY += 1;
+        this.positionY += this.speedY;
         this.angle += 1;
 
         this.draw();
