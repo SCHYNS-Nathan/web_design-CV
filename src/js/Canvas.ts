@@ -1,5 +1,4 @@
 import {Feathers} from "./Feathers";
-import {Animation} from "./Animation";
 import {settings} from "./settings";
 
 export class Canvas {
@@ -7,7 +6,6 @@ export class Canvas {
     private ctx: CanvasRenderingContext2D;
     private feathers: Feathers[];
     private sprite: HTMLImageElement;
-    private animation: Animation;
     private maxFeathers: number;
 
     constructor() {
@@ -31,8 +29,6 @@ export class Canvas {
             })
             this.animate();
         })
-
-
     }
 
     resizeCanvas() {
