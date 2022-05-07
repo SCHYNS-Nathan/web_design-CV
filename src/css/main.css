@@ -31,9 +31,27 @@ ol, ul {
 }
 
 
+/* ---------------  LOAD FONT  --------------- */
+@font-face {
+    font-family: Quando;
+    src: url("../font/Quando-Regular.ttf");
+    font-display: auto;
+}
+@font-face {
+    font-family: MerriweatherLight;
+    src: url("../font/Merriweather-Light.otf");
+    font-display: auto;
+}
+@font-face {
+    font-family: MerriweatherBlack;
+    src: url("../font/Merriweather-Black.otf");
+    font-display: auto;
+}
+
+
 /* --------------- CSS STARTS HERE !!! --------------- */
 body, button {
-    font-family: Quando, Merriweather, serif;
+    font-family: Quando, MerriweatherBlack, serif;
     letter-spacing: 1px;
     background-color: #ECECEC;
     color: #282F39;
@@ -49,7 +67,7 @@ h3 {
     line-height: 120%;
 }
 p, textarea, input {
-    font-family: Merriweather, serif;
+    font-family: MerriweatherLight, serif;
     line-height: 150%;
 }
 br {
@@ -133,7 +151,6 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    // margin-top: -130px;
 }
 .header__img {
     display: block;

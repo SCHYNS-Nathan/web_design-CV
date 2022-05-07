@@ -1,4 +1,11 @@
 // Fade-in
+(function() {
+    const FadeIn = {
+        selector() {
+
+        },
+    }
+})();
 
 let items;
 items = document.querySelectorAll('.fade-in');
@@ -48,6 +55,11 @@ function scrollSlider() {
         });
     }
 }
+
+
+
+
+
 
 
 

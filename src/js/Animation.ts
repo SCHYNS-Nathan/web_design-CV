@@ -1,6 +1,4 @@
 import {Canvas} from "./Canvas";
-import {Feathers} from "./Feathers";
-import {settings} from "./settings";
 
 export class Animation {
     private canvas: Canvas;
