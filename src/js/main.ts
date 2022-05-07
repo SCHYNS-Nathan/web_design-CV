@@ -1,5 +1,6 @@
 // Fade-in
 const items = document.querySelectorAll('.fade-in');
+// @ts-ignore
 for (const item of items) {
     item.classList.add('fade');
 }
