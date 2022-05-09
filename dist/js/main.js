@@ -58,6 +58,16 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 
 eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.random2 = exports.random = exports.settings = void 0;\nexports.settings = {\n  sprite: './src/img/feathers.png',\n  feathers: {\n    frame1: {\n      sx: 14,\n      sy: 54,\n      sw: 104,\n      sh: 125,\n      dx: 0,\n      dy: 0,\n      dw: 40,\n      dh: 45\n    },\n    frame2: {\n      sx: 161,\n      sy: 7,\n      sw: 131,\n      sh: 179,\n      dx: 0,\n      dy: 0,\n      dw: 40,\n      dh: 45\n    },\n    frame3: {\n      sx: 314,\n      sy: 65,\n      sw: 72,\n      sh: 127,\n      dx: 0,\n      dy: 0,\n      dw: 40,\n      dh: 45\n    },\n    positionY: {\n      min: -400,\n      max: -50\n    },\n    speedY: {\n      min: 1,\n      max: 3\n    },\n    angle: {\n      min: 0,\n      max: 360\n    }\n  }\n};\n\nfunction random(min, max) {\n  return random2({\n    min: min,\n    max: max\n  });\n}\n\nexports.random = random;\n\nfunction random2(param) {\n  return param.min + Math.random() * (param.max - param.min) | 0;\n}\n\nexports.random2 = random2;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvc2V0dGluZ3MudHMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQWFBLGdCQUFBQSxHQUFXO0VBQ3BCQyxNQUFNLEVBQUUsd0JBRFk7RUFFcEJDLFFBQVEsRUFBRTtJQUNOQyxNQUFNLEVBQUU7TUFDSkMsRUFBRSxFQUFFLEVBREE7TUFFSkMsRUFBRSxFQUFFLEVBRkE7TUFHSkMsRUFBRSxFQUFFLEdBSEE7TUFJSkMsRUFBRSxFQUFFLEdBSkE7TUFLSkMsRUFBRSxFQUFFLENBTEE7TUFNSkMsRUFBRSxFQUFFLENBTkE7TUFPSkMsRUFBRSxFQUFFLEVBUEE7TUFRSkMsRUFBRSxFQUFFO0lBUkEsQ0FERjtJQVdOQyxNQUFNLEVBQUU7TUFDSlIsRUFBRSxFQUFFLEdBREE7TUFFSkMsRUFBRSxFQUFFLENBRkE7TUFHSkMsRUFBRSxFQUFFLEdBSEE7TUFJSkMsRUFBRSxFQUFFLEdBSkE7TUFLSkMsRUFBRSxFQUFFLENBTEE7TUFNSkMsRUFBRSxFQUFFLENBTkE7TUFPSkMsRUFBRSxFQUFFLEVBUEE7TUFRSkMsRUFBRSxFQUFFO0lBUkEsQ0FYRjtJQXFCTkUsTUFBTSxFQUFFO01BQ0pULEVBQUUsRUFBRSxHQURBO01BRUpDLEVBQUUsRUFBRSxFQUZBO01BR0pDLEVBQUUsRUFBRSxFQUhBO01BSUpDLEVBQUUsRUFBRSxHQUpBO01BS0pDLEVBQUUsRUFBRSxDQUxBO01BTUpDLEVBQUUsRUFBRSxDQU5BO01BT0pDLEVBQUUsRUFBRSxFQVBBO01BUUpDLEVBQUUsRUFBRTtJQVJBLENBckJGO0lBK0JORyxTQUFTLEVBQUU7TUFBQ0MsR0FBRyxFQUFFLENBQUMsR0FBUDtNQUFZQyxHQUFHLEVBQUMsQ0FBQztJQUFqQixDQS9CTDtJQWdDTkMsTUFBTSxFQUFFO01BQUNGLEdBQUcsRUFBRSxDQUFOO01BQVNDLEdBQUcsRUFBQztJQUFiLENBaENGO0lBaUNORSxLQUFLLEVBQUU7TUFBQ0gsR0FBRyxFQUFFLENBQU47TUFBU0MsR0FBRyxFQUFDO0lBQWI7RUFqQ0Q7QUFGVSxDQUFYOztBQXVDYixTQUFnQkcsTUFBaEIsQ0FBdUJKLEdBQXZCLEVBQW9DQyxHQUFwQyxFQUErQztFQUMzQyxPQUFPSSxPQUFPLENBQUM7SUFBQ0wsR0FBRyxFQUFFQSxHQUFOO0lBQVdDLEdBQUcsRUFBRUE7RUFBaEIsQ0FBRCxDQUFkO0FBQ0g7O0FBRkRoQixjQUFBQTs7QUFJQSxTQUFnQm9CLE9BQWhCLENBQXdCQyxLQUF4QixFQUF5RDtFQUNyRCxPQUFPQSxLQUFLLENBQUNOLEdBQU4sR0FBWU8sSUFBSSxDQUFDSCxNQUFMLE1BQWVFLEtBQUssQ0FBQ0wsR0FBTixHQUFVSyxLQUFLLENBQUNOLEdBQS9CLENBQVosR0FBa0QsQ0FBekQ7QUFDSDs7QUFGRGYsZUFBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93ZWJfZGVzaWduLWN2Ly4vc3JjL2pzL3NldHRpbmdzLnRzP2M0MjEiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHNldHRpbmdzID0ge1xyXG4gICAgc3ByaXRlOiAnLi9zcmMvaW1nL2ZlYXRoZXJzLnBuZycsXHJcbiAgICBmZWF0aGVyczoge1xyXG4gICAgICAgIGZyYW1lMToge1xyXG4gICAgICAgICAgICBzeDogMTQsXHJcbiAgICAgICAgICAgIHN5OiA1NCxcclxuICAgICAgICAgICAgc3c6IDEwNCxcclxuICAgICAgICAgICAgc2g6IDEyNSxcclxuICAgICAgICAgICAgZHg6IDAsXHJcbiAgICAgICAgICAgIGR5OiAwLFxyXG4gICAgICAgICAgICBkdzogNDAsXHJcbiAgICAgICAgICAgIGRoOiA0NVxyXG4gICAgICAgIH0sXHJcbiAgICAgICAgZnJhbWUyOiB7XHJcbiAgICAgICAgICAgIHN4OiAxNjEsXHJcbiAgICAgICAgICAgIHN5OiA3LFxyXG4gICAgICAgICAgICBzdzogMTMxLFxyXG4gICAgICAgICAgICBzaDogMTc5LFxyXG4gICAgICAgICAgICBkeDogMCxcclxuICAgICAgICAgICAgZHk6IDAsXHJcbiAgICAgICAgICAgIGR3OiA0MCxcclxuICAgICAgICAgICAgZGg6IDQ1XHJcbiAgICAgICAgfSxcclxuICAgICAgICBmcmFtZTM6IHtcclxuICAgICAgICAgICAgc3g6IDMxNCxcclxuICAgICAgICAgICAgc3k6IDY1LFxyXG4gICAgICAgICAgICBzdzogNzIsXHJcbiAgICAgICAgICAgIHNoOiAxMjcsXHJcbiAgICAgICAgICAgIGR4OiAwLFxyXG4gICAgICAgICAgICBkeTogMCxcclxuICAgICAgICAgICAgZHc6IDQwLFxyXG4gICAgICAgICAgICBkaDogNDVcclxuICAgICAgICB9LFxyXG4gICAgICAgIHBvc2l0aW9uWToge21pbjogLTQwMCwgbWF4Oi01MH0sXHJcbiAgICAgICAgc3BlZWRZOiB7bWluOiAxLCBtYXg6M30sXHJcbiAgICAgICAgYW5nbGU6IHttaW46IDAsIG1heDozNjB9XHJcbiAgICB9XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiByYW5kb20obWluOiBudW1iZXIsIG1heDogbnVtYmVyKSB7XHJcbiAgICByZXR1cm4gcmFuZG9tMih7bWluOiBtaW4sIG1heDogbWF4fSk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiByYW5kb20yKHBhcmFtOiB7bWluOiBudW1iZXIsIG1heDogbnVtYmVyfSkge1xyXG4gICAgcmV0dXJuIHBhcmFtLm1pbiArIE1hdGgucmFuZG9tKCkqKHBhcmFtLm1heC1wYXJhbS5taW4pIHwgMDtcclxufSJdLCJuYW1lcyI6WyJleHBvcnRzIiwic3ByaXRlIiwiZmVhdGhlcnMiLCJmcmFtZTEiLCJzeCIsInN5Iiwic3ciLCJzaCIsImR4IiwiZHkiLCJkdyIsImRoIiwiZnJhbWUyIiwiZnJhbWUzIiwicG9zaXRpb25ZIiwibWluIiwibWF4Iiwic3BlZWRZIiwiYW5nbGUiLCJyYW5kb20iLCJyYW5kb20yIiwicGFyYW0iLCJNYXRoIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/js/settings.ts\n");
 
+/***/ }),
+
+/***/ "./src/css/main.scss":
+/*!***************************!*\
+  !*** ./src/css/main.scss ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY3NzL21haW4uc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93ZWJfZGVzaWduLWN2Ly4vc3JjL2Nzcy9tYWluLnNjc3M/NGJkMyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/css/main.scss\n");
+
 /***/ })
 
 /******/ 	});
@@ -86,12 +96,120 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/Main": 0,
+/******/ 			"css/main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkweb_design_cv"] = self["webpackChunkweb_design_cv"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/Main.ts");
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/main"], () => (__webpack_require__("./src/js/Main.ts")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main"], () => (__webpack_require__("./src/css/main.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;

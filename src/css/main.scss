@@ -28,6 +28,7 @@ body {
 }
 ol, ul {
     list-style: none;
+    position: relative;
 }
 
 
@@ -1077,7 +1078,7 @@ a:focus .portfolioIllu__promoButton {
     opacity: .3;
 }
 .slider__link div {
-    background-image: url("../img/to_instagram.svg");
+    background-image: url("../../src/img/to_instagram.svg");
     background-size: cover;
 }
 
@@ -1121,189 +1122,6 @@ a:focus .portfolioIllu__promoButton {
     -webkit-animation: pop .5s ease-in-out forwards;
     -moz-animation: pop .5s ease-in-out forwards;
     animation: pop .5s ease-in-out forwards;
-}
-
-
-@-moz-keyframes menu {
-    0% {
-        -moz-transform-origin: top right;
-        -moz-transform: scale(0);
-    }
-    25% {
-        -moz-transform: scale(1.2);
-    }
-    35% {
-        -moz-transform: scale(1);
-    }
-    50% {
-        -moz-transform: scale(1.1);
-    }
-    75%{
-        -moz-transform: scale(1);
-    }
-    90% {
-        -moz-transform: scale(1.05);
-    }
-}
-@-moz-keyframes pop {
-    0% {
-        -moz-transform: scale(1);
-    }
-    33% {
-        -moz-transform: scale(1.1);
-    }
-    66% {
-        -moz-transform: scale(.9);
-    }
-    100% {
-        -moz-transform: scale(1.1);
-    }
-}
-@-moz-keyframes topBar {
-    0% {
-        -moz-transform-origin: 17.5%;
-    }
-    50% {
-        -moz-transform: translateY(12px) rotate(0)
-    }
-    100% {
-        -moz-transform-origin: 17.5%;
-        -moz-transform: translate(0) rotate(45deg);
-    }
-}
-@-moz-keyframes midBar {
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@-moz-keyframes botBar {
-    0% {
-        -moz-transform-origin: 17.5%;
-    }
-    50% {
-        -moz-transform: translateY(-12px) rotate(0);
-    }
-    100% {
-        -moz-transform-origin: 17.5%;
-        -moz-transform: translate(0) rotate(-45deg);
-    }
-}
-@-moz-keyframes leftEye {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    100% {
-    }
-}
-@-moz-keyframes rightEye {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(-10deg);
-    }
-    100% {
-    }
-}
-
-@-webkit-keyframes menu {
-    0% {
-        -webkit-transform-origin: top right;
-        -webkit-transform: scale(0);
-    }
-    25% {
-        -webkit-transform: scale(1.2);
-    }
-    35% {
-        -webkit-transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-    }
-    75%{
-        -webkit-transform: scale(1);
-    }
-    90% {
-        -webkit-transform: scale(1.05);
-    }
-}
-@-webkit-keyframes pop {
-    0% {
-        -webkit-transform: scale(1);
-    }
-    33% {
-        -webkit-transform: scale(1.1);
-    }
-    66% {
-        -webkit-transform: scale(.9);
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-    }
-}
-@-webkit-keyframes topBar {
-    0% {
-        -webkit-transform-origin: 17.5%;
-    }
-    50% {
-        -webkit-transform: translateY(12px) rotate(0)
-    }
-    100% {
-        -webkit-transform-origin: 17.5%;
-        -webkit-transform: translate(0) rotate(45deg);
-    }
-}
-@-webkit-keyframes midBar {
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@-webkit-keyframes botBar {
-    0% {
-        -webkit-transform-origin: 17.5%;
-    }
-    50% {
-        -webkit-transform: translateY(-12px) rotate(0);
-    }
-    100% {
-        -webkit-transform-origin: 17.5%;
-        -webkit-transform: translate(0) rotate(-45deg);
-    }
-}
-@-webkit-keyframes leftEye {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    100% {
-    }
-}
-@-webkit-keyframes rightEye {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(-10deg);
-    }
-    100% {
-    }
 }
 
 @keyframes menu {
