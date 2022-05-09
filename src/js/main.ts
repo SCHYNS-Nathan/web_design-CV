@@ -1,3 +1,17 @@
+// Canvas
+import {Canvas} from "./Canvas";
+import {Animation} from "./Animation";
+
+class Main {
+    private canvas: Canvas;
+    private animation: Animation;
+
+    constructor() {
+        this.canvas = new Canvas();
+        this.animation = new Animation(this.canvas);
+    }
+}
+
 // Fade-in
 const items = document.querySelectorAll('.fade-in');
 // @ts-ignore
@@ -60,17 +74,5 @@ for(let i=0; i < items.length; i++){
     Slider.init();
 }) ();
 
-// Canvas
-import {Canvas} from "./Canvas";
-import {Animation} from "./Animation";
 
-class Main {
-    private canvas: Canvas;
-    private animation: Animation;
-
-    constructor() {
-        this.canvas = new Canvas();
-        this.animation = new Animation(this.canvas);
-    }
-}
 new Main();
