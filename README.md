@@ -61,9 +61,7 @@ Le code d'origine part du principe que tous les éléments du site sont en opaci
 ## Quelques tests
 
 Voici un test effectué sur GTMetrix :
-![Test GTMetrix: Grade B | Performances 84% | Structure 93% | Largest contentful paint 1.3s | Total blockin time 0ms | Cumulative layout shift 0.4]([https://ibb.co/Sw80kgw](https://user-images.githubusercontent.com/90833102/173080558-9de4e930-c086-4bd5-a4a4-742a2b6b0dbd.png))
-
-![image](https://user-images.githubusercontent.com/90833102/173080786-37a219e0-1867-4bfe-83c4-c4a2aa245be5.png)
+![Test GTMetrix: Grade B | Performances 84% | Structure 93% | Largest contentful paint 1.3s | Total blockin time 0ms | Cumulative layout shift 0.4](https://user-images.githubusercontent.com/90833102/173080786-37a219e0-1867-4bfe-83c4-c4a2aa245be5.png)
 
 
 
