@@ -47,14 +47,24 @@ Afin de ne pas utiliser des ressources inutilement, j'ai créé un slider custom
 
 
 
+### L'effet fade-in on scroll
+
+Pour rendre la page un peu plus animée et insérer un peu de JS, j'ai modifié un petit code trouvé en ligne ici:
+https://dev.to/miacan2021/fade-in-animation-on-scroll-with-intersectionobserver-vanilla-js-4p27
+
+Le code d'origine part du principe que tous les éléments du site sont en opacité 0 et les font passer en opacité 1. J'ai rajouté une étape à ce code afin qu'il ajoute l'opacité 0 via JS au lieu de laisser un site invisible pour ceux n'utilisant pas le JS. 
+
+
+
 
 
 ## Quelques tests
 
-### GTMetrix
+Voici un test effectué sur GTMetrix :
+![Test GTMetrix: Grade B | Performances 84% | Structure 93% | Largest contentful paint 1.3s | Total blockin time 0ms | Cumulative layout shift 0.4](https://ibb.co/Sw80kgw)
 
-Voici un test effectué sur GTMetrix (avant la minification du javascipt) :
-![Capture d’écran 2022-05-07 231811](C:\Users\nath3\Desktop\Capture d’écran 2022-05-07 231811.png)
+Et voici deux tests effectués sur le Lighthouse de Google :
+
 
 Mis à part un problème due au temps d'apparition du canvas (visible entre 1.4 et 1.8 secondes) tout est dans le vert ! N'ayant malheureusement pas le temps d'optimiser cette partie, ce désagrément ne pourra pas être régler.
 
